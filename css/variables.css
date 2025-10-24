@@ -1,0 +1,66 @@
+/* ========================================
+   CSS Variables (Design System)
+======================================== */
+
+:root {
+  /* カラーパレット */
+  --color-primary: #2D5F3F;      /* 深いグリーン */
+  --color-accent: #D4AF37;       /* ゴールド */
+  --color-bg: #FAF7F2;           /* クリーム */
+  --color-bg-dark: #F5F0E8;      /* ダーククリーム */
+  --color-text: #3E2723;         /* ダークブラウン */
+  --color-text-light: #6D4C41;   /* ライトブラウン */
+  --color-white: #FFFFFF;
+  --color-gray-light: #F5F5F5;
+  --color-gray: #CCCCCC;
+  --color-gray-dark: #999999;
+
+  /* タイポグラフィ */
+  --font-serif: 'Noto Serif JP', serif;
+  --font-sans: 'Noto Sans JP', sans-serif;
+
+  /* フォントサイズ（レスポンシブ） */
+  --font-size-h1: clamp(2rem, 5vw, 3.5rem);        /* 32px〜56px */
+  --font-size-h2: clamp(1.5rem, 4vw, 2.5rem);      /* 24px〜40px */
+  --font-size-h3: clamp(1.25rem, 3vw, 1.75rem);    /* 20px〜28px */
+  --font-size-body: clamp(1rem, 2vw, 1.125rem);    /* 16px〜18px */
+  --font-size-small: clamp(0.875rem, 1.5vw, 1rem); /* 14px〜16px */
+
+  /* スペーシング */
+  --spacing-xs: 0.5rem;    /* 8px */
+  --spacing-sm: 1rem;      /* 16px */
+  --spacing-md: 2rem;      /* 32px */
+  --spacing-lg: 4rem;      /* 64px */
+  --spacing-xl: 6rem;      /* 96px */
+  --spacing-xxl: 8rem;     /* 128px */
+
+  /* コンテナ */
+  --container-max-width: 1200px;
+  --container-padding: 1.5rem;
+
+  /* ボーダー・角丸 */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 16px;
+  --border-radius-full: 9999px;
+
+  /* シャドウ */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+  /* トランジション */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.6s ease;
+
+  /* イージング */
+  --ease-out-cubic: cubic-bezier(0.33, 1, 0.68, 1);
+  --ease-in-out-cubic: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-bounce: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+
+  /* z-index */
+  --z-header: 1000;
+  --z-modal: 2000;
+  --z-tooltip: 3000;
+}
