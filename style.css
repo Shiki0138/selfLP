@@ -797,7 +797,33 @@ a:hover {
     border-top: 1px solid #f0f0f0;
 }
 
-/* Media Section */
+/* Image Break Section */
+.image-break {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.image-break-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.break-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .break-img {
+        height: 300px;
+        object-fit: cover;
+        object-position: 80% center;
+        /* Focus on the right side where products are */
+    }
+}
+
 .media-section {
     background-color: #fcfcfc;
     overflow: hidden;
