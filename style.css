@@ -901,26 +901,58 @@ a:hover {
 
 /* Mobile Hero Fix */
 @media (max-width: 768px) {
+    .hero {
+        align-items: flex-end;
+        /* Align content to bottom for better visibility of bg */
+        padding-bottom: 100px;
+        /* Space for sticky footer */
+    }
+
     .hero-bg {
-        background-position: 75% center;
+        background-position: 80% center;
+        background-size: cover;
     }
 
     .hero-content {
-        background: rgba(255, 255, 255, 0.7);
-        backdrop-filter: blur(5px);
-        padding: 30px 20px;
-        border-radius: 15px;
-        margin: 0 20px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        background: rgba(255, 255, 255, 0.6);
+        /* More transparent */
+        backdrop-filter: blur(3px);
+        padding: 20px 15px;
+        border-radius: 10px;
+        margin: 0 15px 20px 15px;
+        /* Add margin bottom */
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        max-width: 90%;
+    }
+
+    .hero-sub {
+        font-size: 1rem;
+        margin-bottom: 10px;
     }
 
     .hero-title {
-        font-size: 2.2rem;
+        font-size: 1.8rem;
+        /* Smaller font */
+        margin-bottom: 15px;
     }
 
     .hero-catch {
+        font-size: 1rem;
+        margin-bottom: 20px;
         color: #333;
         font-weight: 500;
+    }
+
+    .btn-main {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+
+    /* Intro Section Mobile */
+    .section-title {
+        font-size: 1.4rem;
+        /* Smaller section title */
+        line-height: 1.6;
     }
 }
 
