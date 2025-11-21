@@ -902,56 +902,68 @@ a:hover {
 /* Mobile Hero Fix */
 @media (max-width: 768px) {
     .hero {
-        align-items: flex-end;
-        /* Align content to bottom for better visibility of bg */
-        padding-bottom: 100px;
-        /* Space for sticky footer */
+        align-items: center;
+        /* Center vertically */
+        padding-bottom: 80px;
+        /* Reduced padding */
+        justify-content: flex-start;
+        /* Align content to left */
     }
 
     .hero-bg {
-        background-position: 80% center;
+        background-position: 70% center;
+        /* Shift image to show bottle on right */
         background-size: cover;
     }
 
     .hero-content {
-        background: rgba(255, 255, 255, 0.6);
-        /* More transparent */
-        backdrop-filter: blur(3px);
+        background: rgba(255, 255, 255, 0.4);
+        /* Increased transparency */
+        backdrop-filter: blur(2px);
+        /* Reduced blur */
         padding: 20px 15px;
         border-radius: 10px;
-        margin: 0 15px 20px 15px;
-        /* Add margin bottom */
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        max-width: 90%;
+        margin: 0 0 0 15px;
+        /* Left margin only */
+        box-shadow: none;
+        /* Remove shadow to reduce "box" feel */
+        max-width: 65%;
+        /* Narrower width to reveal right side */
+        text-align: left;
     }
 
     .hero-sub {
-        font-size: 1rem;
-        margin-bottom: 10px;
+        font-size: 0.9rem;
+        /* Smaller font */
+        margin-bottom: 8px;
+        color: #222;
+        /* Darker for contrast on transparent bg */
     }
 
     .hero-title {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         /* Smaller font */
-        margin-bottom: 15px;
+        margin-bottom: 10px;
+        line-height: 1.4;
+        color: #111;
     }
 
     .hero-catch {
-        font-size: 1rem;
-        margin-bottom: 20px;
+        font-size: 0.9rem;
+        margin-bottom: 15px;
         color: #333;
         font-weight: 500;
     }
 
     .btn-main {
-        padding: 12px 30px;
-        font-size: 1rem;
+        padding: 10px 25px;
+        font-size: 0.9rem;
     }
 
     /* Intro Section Mobile */
     .section-title {
-        font-size: 1.4rem;
-        /* Smaller section title */
+        font-size: 1.2rem;
+        /* Reduced from 1.4rem to prevent wrapping */
         line-height: 1.6;
     }
 }
