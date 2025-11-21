@@ -140,6 +140,26 @@
             </div>
         </section>
 
+        <!-- Media Section -->
+        <section class="media-section section-padding fade-in-up">
+            <div class="container">
+                <div class="media-content">
+                    <div class="media-images">
+                        <img src="assets/images/media_sweet_article.jpg" alt="Sweet Article" class="media-article">
+                        <img src="assets/images/media_sweet_cover.jpg" alt="Sweet Cover" class="media-cover">
+                    </div>
+                    <div class="media-text">
+                        <p class="media-label">人気雑誌『sweet』掲載</p>
+                        <p class="media-comment">
+                            「わたしもう名品しかいらない！」特集にて、<br>
+                            髪質改善のプロが作ったシャンプーとして<br>
+                            紹介されました。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- User Voices -->
         <section class="voices section-padding bg-light fade-in-up">
             <div class="container">
@@ -372,32 +392,38 @@
 
     <footer class="site-footer">
         <div class="container">
-            <p>&copy; 2023 self. All Rights Reserved.</p>
+            <p>&copy; 2024 self. All Rights Reserved.</p>
+            <div class="footer-cta-pc">
+                <a href="#product" class="btn-main">商品を見る</a>
+            </div>
             <div class="footer-links">
                 <a href="tokusho.html">特定商取引法に基づく表記</a>
                 <a href="privacy.html">プライバシーポリシー</a>
             </div>
         </div>
     </footer>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const observerOptions = {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.1
-            };
 
-            const observer = new IntersectionObserver((entries, observer) => {
+    <!-- Sticky Footer for Mobile -->
+    <div class="sticky-footer">
+        <a href="#product" class="btn-sticky">商品を見る</a>
+    </div>
+
+    <script>
+        // Fade-in animation
+        document.addEventListener('DOMContentLoaded', function () {
+            const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('visible');
-                        observer.unobserve(entry.target); // Only animate once
                     }
                 });
-            }, observerOptions);
+            }, {
+                threshold: 0.1
+            });
 
-            const elements = document.querySelectorAll('.fade-in-up');
-            elements.forEach(el => observer.observe(el));
+            document.querySelectorAll('.fade-in-up').forEach(el => {
+                observer.observe(el);
+            });
 
             /* FAQ Accordion */
             const faqItems = document.querySelectorAll('.faq-item');
