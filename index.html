@@ -22,318 +22,6 @@
         href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Shippori+Mincho:wght@400;500;600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* Instagram LP Specific Styles */
-
-        /* Main Product (Set) Hero Card */
-        .main-product-section {
-            padding: 60px 0;
-            background: linear-gradient(180deg, #fffbf0 0%, #fff 100%);
-            text-align: center;
-        }
-
-        .main-product-card {
-            max-width: 500px;
-            margin: 0 auto;
-            background: #fff;
-            border-radius: 20px;
-            padding: 40px 30px;
-            box-shadow: 0 15px 50px rgba(212, 175, 55, 0.2);
-            border: 3px solid var(--accent-color);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .main-product-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 6px;
-            background: linear-gradient(90deg, #D4AF37, #f4d03f, #D4AF37);
-            background-size: 200% 100%;
-            animation: shimmerBar 2s linear infinite;
-        }
-
-        .recommend-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: linear-gradient(135deg, #D4AF37, #f4d03f);
-            color: #333;
-            padding: 8px 20px;
-            border-radius: 30px;
-            font-size: 0.9rem;
-            font-weight: bold;
-            margin-bottom: 20px;
-            animation: pulse 2s ease-in-out infinite;
-        }
-
-        .recommend-badge::before {
-            content: '👑';
-            font-size: 1.1rem;
-        }
-
-        .main-product-img {
-            width: 100%;
-            max-width: 300px;
-            margin: 0 auto 20px;
-        }
-
-        .main-product-img img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-
-        .main-product-name {
-            font-size: 1.5rem;
-            font-family: var(--font-serif);
-            color: #333;
-            margin-bottom: 15px;
-        }
-
-        .main-product-price {
-            font-size: 2.2rem;
-            font-weight: bold;
-            color: #333;
-            font-family: var(--font-serif);
-            margin-bottom: 10px;
-        }
-
-        .main-product-price .tax {
-            font-size: 1rem;
-            font-weight: normal;
-        }
-
-        .campaign-discount-badge {
-            display: inline-block;
-            background: linear-gradient(135deg, #c41e3a, #e74c5e);
-            color: #fff;
-            padding: 8px 20px;
-            border-radius: 8px;
-            font-size: 0.95rem;
-            font-weight: bold;
-            margin-bottom: 20px;
-            animation: pulse 1.5s ease-in-out infinite;
-        }
-
-        .product-benefits {
-            text-align: left;
-            background: #fafafa;
-            border-radius: 10px;
-            padding: 20px;
-            margin: 20px 0;
-        }
-
-        .product-benefits li {
-            padding: 8px 0;
-            padding-left: 25px;
-            position: relative;
-            font-size: 0.95rem;
-            color: #555;
-            list-style: none;
-        }
-
-        .product-benefits li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: var(--accent-color);
-            font-weight: bold;
-        }
-
-        .btn-purchase-main {
-            display: block;
-            width: 100%;
-            background: linear-gradient(135deg, #D4AF37, #f4d03f, #D4AF37);
-            background-size: 200% 100%;
-            color: #333;
-            padding: 18px;
-            border-radius: 50px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            text-align: center;
-            text-decoration: none;
-            box-shadow: 0 8px 30px rgba(212, 175, 55, 0.4);
-            transition: transform 0.3s, box-shadow 0.3s;
-            animation: buttonShine 3s linear infinite;
-            cursor: pointer;
-            border: none;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .btn-purchase-main:hover {
-            transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 12px 40px rgba(212, 175, 55, 0.5);
-            opacity: 1;
-        }
-
-        .btn-purchase-main::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-            animation: shine 2s ease-in-out infinite;
-        }
-
-        .coupon-reminder {
-            margin-top: 15px;
-            padding: 12px;
-            background: #fff8f0;
-            border-radius: 8px;
-            border: 2px dashed #c41e3a;
-        }
-
-        .coupon-reminder p {
-            margin: 0;
-            font-size: 0.85rem;
-            color: #666;
-        }
-
-        .coupon-reminder .code {
-            font-family: 'Courier New', monospace;
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #c41e3a;
-            letter-spacing: 0.15em;
-        }
-
-        /* Single Products Section */
-        .single-products-section {
-            padding: 60px 0;
-            background: #f9f9f9;
-            text-align: center;
-        }
-
-        .single-products-header {
-            margin-bottom: 40px;
-        }
-
-        .single-products-header h3 {
-            font-size: 1.3rem;
-            color: #666;
-            font-family: var(--font-serif);
-            font-weight: 400;
-            margin-bottom: 10px;
-        }
-
-        .single-products-header p {
-            font-size: 0.9rem;
-            color: #999;
-        }
-
-        .single-products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .single-product-card {
-            background: #fff;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-            text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .single-product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-        }
-
-        .single-product-card img {
-            width: 100%;
-            max-width: 150px;
-            height: auto;
-            margin-bottom: 15px;
-        }
-
-        .single-product-card h4 {
-            font-size: 1rem;
-            font-family: var(--font-serif);
-            color: #333;
-            margin-bottom: 10px;
-            min-height: 2.5em;
-        }
-
-        .single-product-card .price {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 15px;
-        }
-
-        .single-product-card .price .tax {
-            font-size: 0.8rem;
-            font-weight: normal;
-        }
-
-        .btn-purchase-single {
-            display: block;
-            width: 100%;
-            background: #333;
-            color: #fff;
-            padding: 12px;
-            border-radius: 30px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            text-align: center;
-            text-decoration: none;
-            transition: background 0.3s, transform 0.3s;
-            cursor: pointer;
-            border: none;
-        }
-
-        .btn-purchase-single:hover {
-            background: #555;
-            transform: scale(1.02);
-            opacity: 1;
-        }
-
-        /* Sticky CTA for this LP */
-        .sticky-footer .btn-sticky {
-            background: linear-gradient(135deg, #D4AF37, #f4d03f);
-            color: #333;
-        }
-
-        @media (max-width: 768px) {
-            .main-product-card {
-                margin: 0 15px;
-                padding: 30px 20px;
-            }
-
-            .main-product-name {
-                font-size: 1.3rem;
-            }
-
-            .main-product-price {
-                font-size: 1.8rem;
-            }
-
-            .single-products-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 15px;
-                padding: 0 15px;
-            }
-
-            .single-product-card {
-                padding: 15px;
-            }
-
-            .single-product-card h4 {
-                font-size: 0.85rem;
-            }
-        }
-    </style>
     <script type="text/javascript">
         (function (c, l, a, r, i, t, y) {
             c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
@@ -379,7 +67,7 @@
                         <span class="campaign-period">〜 12/28（土）まで</span>
                     </div>
                     <h3 class="campaign-title">12月リニューアルキャンペーン</h3>
-                    <p class="campaign-desc">selfのリニューアルを記念して、<br>シャンプー＆トリートメントセット購入で <strong>500円OFF</strong>！</p>
+                    <p class="campaign-desc">selfのリニューアルを記念して、<br>全商品 <strong>500円OFF</strong> でご提供中！</p>
                     <div class="campaign-coupon">
                         <span class="coupon-label">クーポンコード</span>
                         <span class="coupon-code">0138</span>
@@ -406,6 +94,7 @@
                 </div>
             </div>
         </section>
+
 
         <!-- Introduction (Empathy) -->
         <section class="intro section-padding fade-in-up">
@@ -549,6 +238,7 @@
                 <h3 class="section-title">「魅せ髪」を手に入れた方の声</h3>
                 <div class="voice-slider-container">
                     <div class="voice-track">
+                        <!-- 1 -->
                         <div class="voice-card">
                             <div class="voice-img-container">
                                 <img src="assets/images/voice_user_1.png" alt="User 1" class="voice-img">
@@ -556,6 +246,7 @@
                             <p class="voice-comment">「夫に『髪、綺麗になったね』と褒められました！特別な日の前日は必ずselfを使っています。」</p>
                             <p class="voice-user">30代 女性</p>
                         </div>
+                        <!-- 2 -->
                         <div class="voice-card">
                             <div class="voice-img-container">
                                 <img src="assets/images/voice_user_2.png" alt="User 2" class="voice-img">
@@ -563,6 +254,7 @@
                             <p class="voice-comment">「雨の日でも広がらないのが嬉しい。毎朝のアイロン時間が半分になりました。」</p>
                             <p class="voice-user">40代 女性</p>
                         </div>
+                        <!-- 3 -->
                         <div class="voice-card">
                             <div class="voice-img-container">
                                 <img src="assets/images/voice_user_3.png" alt="User 3" class="voice-img">
@@ -570,6 +262,7 @@
                             <p class="voice-comment">「美容室のトリートメントがいらなくなりました。自宅でこれができるなんて感動。」</p>
                             <p class="voice-user">30代 女性</p>
                         </div>
+                        <!-- 4 -->
                         <div class="voice-card">
                             <div class="voice-img-container">
                                 <img src="assets/images/voice_user_4.png" alt="User 4" class="voice-img">
@@ -577,6 +270,7 @@
                             <p class="voice-comment">「使い続けるほどに髪が柔らかくなっていくのを実感しています。香りも癒されます。」</p>
                             <p class="voice-user">50代 女性</p>
                         </div>
+                        <!-- 5 -->
                         <div class="voice-card">
                             <div class="voice-img-container">
                                 <img src="assets/images/voice_user_5.png" alt="User 5" class="voice-img">
@@ -584,7 +278,8 @@
                             <p class="voice-comment">「パサつきが気にならなくなり、天使の輪ができるようになりました。もう手放せません。」</p>
                             <p class="voice-user">20代 女性</p>
                         </div>
-                        <!-- Duplicate for infinite scroll -->
+                        <!-- Duplicate for infinite scroll (first few items) -->
+                        <!-- 1 -->
                         <div class="voice-card">
                             <div class="voice-img-container">
                                 <img src="assets/images/voice_user_1.png" alt="User 1" class="voice-img">
@@ -592,6 +287,7 @@
                             <p class="voice-comment">「夫に『髪、綺麗になったね』と褒められました！特別な日の前日は必ずselfを使っています。」</p>
                             <p class="voice-user">30代 女性</p>
                         </div>
+                        <!-- 2 -->
                         <div class="voice-card">
                             <div class="voice-img-container">
                                 <img src="assets/images/voice_user_2.png" alt="User 2" class="voice-img">
@@ -599,6 +295,7 @@
                             <p class="voice-comment">「雨の日でも広がらないのが嬉しい。毎朝のアイロン時間が半分になりました。」</p>
                             <p class="voice-user">40代 女性</p>
                         </div>
+                        <!-- 3 -->
                         <div class="voice-card">
                             <div class="voice-img-container">
                                 <img src="assets/images/voice_user_1.png" alt="User 3" class="voice-img">
@@ -611,95 +308,53 @@
             </div>
         </section>
 
-        <!-- ========================================== -->
-        <!-- Main Product Section: SET (Primary CTA) -->
-        <!-- ========================================== -->
-        <section id="product" class="main-product-section fade-in-up">
+        <!-- Offer / CTA -->
+        <section id="product" class="offer section-padding fade-in-up">
             <div class="container">
                 <h3 class="section-title">まずは、その「違い」を<br>あなたの髪で。</h3>
-
-                <div class="main-product-card">
-                    <span class="recommend-badge">美容師おすすめNo.1</span>
-
-                    <div class="main-product-img">
-                        <img src="assets/images/product_set.png" alt="selfシャンプー＆トリートメントセット">
+                <div class="product-grid">
+                    <!-- Product 1: Set -->
+                    <div class="product-card">
+                        <div class="product-img-sm">
+                            <img src="assets/images/product_set.png" alt="selfシャンプー＆トリートメントセット">
+                        </div>
+                        <h4>selfシャンプー＆<br>トリートメントセット</h4>
+                        <p class="price">¥8,460 <span class="tax">(税込)</span></p>
+                        <a href="https://shop.self138.com/product-page/self%E3%82%B7%E3%83%A3%E3%83%B3%E3%83%97%E3%83%BC-%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%B3%E3%83%88%E3%82%BB%E3%83%83%E3%83%88-1"
+                            class="btn-main btn-sm">詳細を見る</a>
                     </div>
 
-                    <h4 class="main-product-name">selfシャンプー＆<br>トリートメントセット</h4>
-
-                    <p class="main-product-price">¥8,460 <span class="tax">(税込)</span></p>
-
-                    <div class="campaign-discount-badge">
-                        🎉 リニューアル記念 500円OFF
-                    </div>
-
-                    <ul class="product-benefits">
-                        <li>同シリーズ併用で効果を最大限発揮</li>
-                        <li>髪質改善のプロが選ぶ組み合わせ</li>
-                        <li>単品購入より継続しやすい</li>
-                        <li>91%がリピートする実力派</li>
-                    </ul>
-
-                    <!-- 商品ページへ遷移 -->
-                    <a href="https://shop.self138.com/product-page/self%E3%82%B7%E3%83%A3%E3%83%B3%E3%83%97%E3%83%BC-%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%B3%E3%83%88%E3%82%BB%E3%83%83%E3%83%88-1"
-                        class="btn-purchase-main"
-                        onclick="trackPurchase('set', '3498a1aa-0541-187c-d551-be04352a8eac')">
-                        🛒 今すぐ購入する
-                    </a>
-
-                    <div class="coupon-reminder">
-                        <p>購入時にクーポンコード <span class="code">0138</span> を入力で500円OFF！</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ========================================== -->
-        <!-- Single Products Section (Secondary) -->
-        <!-- ========================================== -->
-        <section class="single-products-section fade-in-up">
-            <div class="container">
-                <div class="single-products-header">
-                    <h3>まずは単品から試したい方へ</h3>
-                    <p>お好みの商品をお選びいただけます</p>
-                </div>
-
-                <div class="single-products-grid">
-                    <!-- Shampoo -->
-                    <div class="single-product-card">
-                        <img src="assets/images/product_shampoo.png" alt="selfシャンプー">
+                    <!-- Product 2: Shampoo -->
+                    <div class="product-card">
+                        <div class="product-img-sm">
+                            <img src="assets/images/product_shampoo.png" alt="selfシャンプー">
+                        </div>
                         <h4>selfシャンプー</h4>
                         <p class="price">¥3,980 <span class="tax">(税込)</span></p>
                         <a href="https://shop.self138.com/product-page/self%E3%82%B7%E3%83%A3%E3%83%B3%E3%83%97%E3%83%BC-%E3%83%9C%E3%83%88%E3%83%AB-%E8%A9%B0%E6%9B%BF%E7%94%A8"
-                            class="btn-purchase-single"
-                            onclick="trackPurchase('shampoo', 'bce1a0c5-8cb5-eee6-6956-1324760b5e47')">
-                            購入する
-                        </a>
+                            class="btn-main btn-sm">詳細を見る</a>
                     </div>
 
-                    <!-- Treatment -->
-                    <div class="single-product-card">
-                        <img src="assets/images/product_treatment.png" alt="selfトリートメント">
+                    <!-- Product 3: Treatment -->
+                    <div class="product-card">
+                        <div class="product-img-sm">
+                            <img src="assets/images/product_treatment.png" alt="selfトリートメント">
+                        </div>
                         <h4>selfトリートメント</h4>
                         <p class="price">¥4,480 <span class="tax">(税込)</span></p>
                         <a href="https://shop.self138.com/product-page/self%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%B3%E3%83%88-%E3%83%9C%E3%83%88%E3%83%AB-%E8%A9%B0%E6%9B%BF%E7%94%A8"
-                            class="btn-purchase-single"
-                            onclick="trackPurchase('treatment', 'cf14aa0a-9c70-65a2-ace8-6fabe635a681')">
-                            購入する
-                        </a>
+                            class="btn-main btn-sm">詳細を見る</a>
                     </div>
 
-                    <!-- Hair Oil -->
-                    <div class="single-product-card">
-                        <img src="assets/images/product_oil.png" alt="selfヘアオイル">
-                        <h4>selfヘアオイル<br><span style="font-size:0.75rem; font-weight:normal;">(洗い流さないトリートメント)</span>
-                        </h4>
+                    <!-- Product 4: Oil -->
+                    <div class="product-card">
+                        <div class="product-img-sm">
+                            <img src="assets/images/product_oil.png" alt="selfヘアオイル">
+                        </div>
+                        <h4>selfヘアオイル<br><span style="font-size:0.8rem; font-weight:normal;">(洗い流さないトリートメント)</span></h4>
                         <p class="price">¥3,500 <span class="tax">(税込)</span></p>
                         <a href="https://shop.self138.com/product-page/self%E3%83%98%E3%82%A2%E3%82%AA%E3%82%A4%E3%83%AB-%E6%B5%81%E3%81%95%E3%81%AA%E3%81%84%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%B3%E3%83%88"
-                            class="btn-purchase-single"
-                            onclick="trackPurchase('oil', 'a40c85ef-86af-02a3-1197-4c369bbfa8c5')">
-                            購入する
-                        </a>
+                            class="btn-main btn-sm">詳細を見る</a>
                     </div>
                 </div>
             </div>
@@ -822,27 +477,10 @@
 
     <!-- Sticky Footer for Mobile -->
     <div class="sticky-footer">
-        <a href="https://shop.self138.com/product-page/self%E3%82%B7%E3%83%A3%E3%83%B3%E3%83%97%E3%83%BC-%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%B3%E3%83%88%E3%82%BB%E3%83%83%E3%83%88-1"
-            class="btn-sticky" onclick="trackPurchase('set', '3498a1aa-0541-187c-d551-be04352a8eac')">
-            セットを購入する
-        </a>
+        <a href="#product" class="btn-sticky">商品を見る</a>
     </div>
 
     <script>
-        /* ================================================
-         * Purchase Tracking for GTM
-         * ================================================ */
-        function trackPurchase(productName, productId) {
-            if (typeof dataLayer !== 'undefined') {
-                dataLayer.push({
-                    'event': 'add_to_cart',
-                    'product_id': productId,
-                    'product_name': productName,
-                    'source': 'top_page'
-                });
-            }
-        }
-
         // Campaign & News Date Control
         (function () {
             const now = new Date();
