@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2分ヘアチェック | self</title>
+  <meta name="description" content="美容師さんのおすすめで始める2分ヘアチェック。今の髪状態とあなた向けケアのヒントがわかります。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg:#f8f6f3; --card:#fff; --text:#222; --muted:#6a6a6a; --main:#7a5b43; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family:"Noto Sans JP", sans-serif; color:var(--text); background:var(--bg); }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 24px 16px 48px; }
+    .hero { background:var(--card); border-radius:16px; padding:24px 18px; box-shadow:0 6px 24px rgba(0,0,0,.07); }
+    h1 { font-size:1.6rem; margin:0 0 10px; line-height:1.4; }
+    p { margin:0; line-height:1.75; }
+    .muted { color:var(--muted); }
+    .tag { display:inline-block; font-size:.8rem; background:#efe9e4; color:#5d4636; border-radius:999px; padding:6px 10px; margin-bottom:10px; }
+    .list { margin:16px 0 0; padding:0 0 0 1.1rem; color:var(--text); }
+    .list li { margin:8px 0; }
+    .cta { display:block; text-align:center; margin-top:18px; background:var(--main); color:#fff; text-decoration:none; padding:14px 16px; border-radius:12px; font-weight:700; }
+    .sub { background:var(--card); border-radius:16px; margin-top:16px; padding:18px; }
+    .note { margin-top:12px; font-size:.84rem; color:var(--muted); }
+    .code { font-weight:700; color:#3e2f24; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <span class="tag">美容師さんからのご案内</span>
+      <h1>2分でわかる、あなた向けヘアチェック</h1>
+      <p class="muted">いまの髪状態と、毎日続けやすいケアのヒントを提案します。<br>押し売りはしません。あなたに合う選択肢だけ確認してください。</p>
+      <ul class="list">
+        <li>朝のまとまりやすさ</li>
+        <li>乾燥・うねりの傾向</li>
+        <li>生活習慣をふまえたケア提案</li>
+      </ul>
+      <a id="diagnosisCta" class="cta" href="https://hair-health-app.vercel.app/s/fleeks/form?utm_source=salon_touch&utm_medium=nfc&utm_campaign=diagnosis">無料でヘアチェックを始める</a>
+      <p class="note">※ 医療診断ではなく、ヘアカウンセリング用のチェックです。</p>
+    </section>
+
+    <section class="sub">
+      <p><strong>紹介コードのある方へ</strong></p>
+      <p class="muted" style="margin-top:6px;">このページの下記コードは購入時の特典対象です。</p>
+      <p style="margin-top:10px;">紹介コード: <span id="codeText" class="code">未設定</span></p>
+      <a id="shopCta" class="cta" style="margin-top:14px;" href="https://shop.self138.com/">商品ページを見る（任意）</a>
+    </section>
+  </main>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const code = (params.get('code') || '').trim();
+
+    const diagnosis = document.getElementById('diagnosisCta');
+    const shop = document.getElementById('shopCta');
+    const codeText = document.getElementById('codeText');
+
+    if (code) {
+      diagnosis.href = `https://hair-health-app.vercel.app/s/fleeks/form?code=${encodeURIComponent(code)}&utm_source=salon_touch&utm_medium=nfc&utm_campaign=diagnosis`;
+      shop.href = `https://shop.self138.com/?code=${encodeURIComponent(code)}&utm_source=salon_touch&utm_medium=nfc&utm_campaign=shop`;
+      codeText.textContent = code;
+    }
+  </script>
+</body>
+</html>
