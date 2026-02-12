@@ -9,80 +9,28 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --bg: #f7f3ef;
-      --card: #ffffff;
-      --text: #222;
-      --muted: #5f5a55;
-      --main: #6f4f3d;
-      --sub: #8a6b58;
-      --line: #e6ddd6;
-    }
+    :root { --bg:#f7f3ef; --card:#fff; --text:#222; --muted:#5f5a55; --main:#6f4f3d; --sub:#8a6b58; --line:#e6ddd6; }
     * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: "Noto Sans JP", sans-serif;
-      color: var(--text);
-      background: var(--bg);
-      line-height: 1.7;
-    }
-    .wrap {
-      max-width: 820px;
-      margin: 0 auto;
-      padding: 20px 14px 44px;
-    }
-    .card {
-      background: var(--card);
-      border-radius: 16px;
-      padding: 22px 18px;
-      box-shadow: 0 8px 30px rgba(0,0,0,.06);
-      border: 1px solid var(--line);
-      margin-bottom: 14px;
-    }
-    .tag {
-      display: inline-block;
-      font-size: .78rem;
-      background: #efe6df;
-      color: #5e4333;
-      border-radius: 999px;
-      padding: 6px 10px;
-      margin-bottom: 10px;
-      font-weight: 700;
-    }
-    h1 { margin: 0 0 10px; font-size: 1.6rem; line-height: 1.4; }
-    h2 { margin: 0 0 8px; font-size: 1.15rem; }
-    p { margin: 0; }
-    .muted { color: var(--muted); }
-    .lead { font-size: 1.03rem; }
-    ul { margin: 10px 0 0; padding-left: 1.1rem; }
-    li { margin: 7px 0; }
-    .point {
-      border-left: 4px solid #d4c0b2;
-      padding-left: 10px;
-      margin-top: 10px;
-    }
-    .cta {
-      display: block;
-      text-align: center;
-      text-decoration: none;
-      color: #fff;
-      background: linear-gradient(135deg, var(--main), var(--sub));
-      border-radius: 12px;
-      padding: 14px 16px;
-      font-weight: 700;
-      margin-top: 14px;
-    }
-    .code {
-      font-weight: 700;
-      color: #3f2e23;
-      background: #f4ece6;
-      border: 1px dashed #d4c0b2;
-      border-radius: 8px;
-      display: inline-block;
-      padding: 5px 10px;
-      margin-left: 6px;
-    }
-    .small { font-size: .84rem; color: var(--muted); margin-top: 8px; }
+    body { margin:0; font-family:"Noto Sans JP",sans-serif; color:var(--text); background:var(--bg); line-height:1.7; }
+    .wrap { max-width:820px; margin:0 auto; padding:20px 14px 44px; }
+    .card { background:var(--card); border-radius:16px; padding:22px 18px; box-shadow:0 8px 30px rgba(0,0,0,.06); border:1px solid var(--line); margin-bottom:14px; }
+    .tag { display:inline-block; font-size:.78rem; background:#efe6df; color:#5e4333; border-radius:999px; padding:6px 10px; margin-bottom:10px; font-weight:700; }
+    h1 { margin:0 0 10px; font-size:1.6rem; line-height:1.4; }
+    h2 { margin:0 0 8px; font-size:1.15rem; }
+    p { margin:0; }
+    .muted { color:var(--muted); }
+    .lead { font-size:1.03rem; }
+    ul { margin:10px 0 0; padding-left:1.1rem; }
+    li { margin:7px 0; }
+    .point { border-left:4px solid #d4c0b2; padding-left:10px; margin-top:10px; }
+    .hero-img, .full-img { width:100%; border-radius:12px; display:block; }
+    .split { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:12px; }
+    .split figure { margin:0; }
+    .split figcaption { font-size:.78rem; color:var(--muted); margin-top:6px; text-align:center; }
+    .cta { display:block; text-align:center; text-decoration:none; color:#fff; background:linear-gradient(135deg,var(--main),var(--sub)); border-radius:12px; padding:14px 16px; font-weight:700; margin-top:14px; }
+    .code { font-weight:700; color:#3f2e23; background:#f4ece6; border:1px dashed #d4c0b2; border-radius:8px; display:inline-block; padding:5px 10px; margin-left:6px; }
+    .small { font-size:.84rem; color:var(--muted); margin-top:8px; }
+    @media (max-width:640px){ .split{grid-template-columns:1fr;} }
   </style>
 </head>
 <body>
@@ -91,19 +39,30 @@
       <span class="tag">担当美容師さんからのご案内</span>
       <h1>selfは「洗うだけ」ではなく、<br>毎日のケアで髪のまとまりを整えるための選択です。</h1>
       <p class="lead muted">店頭での仕上がりを、家でのケアでも崩しにくくするために使う方が増えています。</p>
+      <img class="hero-img" src="../assets/images/salon_interior.png" alt="美容師が店頭でヘアケアを説明するイメージ" style="margin-top:14px;" />
     </section>
 
     <section class="card">
       <h2>普通のシャンプーと何が違うの？</h2>
-      <div class="point">
-        <p><strong>1. 保水を意識した設計</strong><br><span class="muted">乾燥しやすい髪でも、指通りを保ちやすい。</span></p>
+      <div class="point"><p><strong>1. 保水を意識した設計</strong><br><span class="muted">乾燥しやすい髪でも、指通りを保ちやすい。</span></p></div>
+      <div class="point"><p><strong>2. 補修ケアを習慣化しやすい</strong><br><span class="muted">毎日のルーティンで、まとまり感の土台を作る。</span></p></div>
+      <div class="point"><p><strong>3. 熱ケアとの相性を重視</strong><br><span class="muted">ドライヤー・アイロン前後の仕上がりを意識しやすい。</span></p></div>
+      <img class="full-img" src="../assets/images/feature_moisture.png" alt="保水ケアの特徴イメージ" style="margin-top:14px;" />
+    </section>
+
+    <section class="card">
+      <h2>体感イメージ</h2>
+      <div class="split">
+        <figure>
+          <img class="full-img" src="../assets/images/generated_variation_2.png" alt="ケア前の髪質イメージ" />
+          <figcaption>Beforeイメージ</figcaption>
+        </figure>
+        <figure>
+          <img class="full-img" src="../assets/images/generated_variation_4.png" alt="ケア後のまとまりイメージ" />
+          <figcaption>Afterイメージ</figcaption>
+        </figure>
       </div>
-      <div class="point">
-        <p><strong>2. 補修ケアを習慣化しやすい</strong><br><span class="muted">毎日のルーティンで、まとまり感の土台を作る。</span></p>
-      </div>
-      <div class="point">
-        <p><strong>3. 熱ケアとの相性を重視</strong><br><span class="muted">ドライヤー・アイロン前後の仕上がりを意識しやすい。</span></p>
-      </div>
+      <p class="small">※ 体感には個人差があります。担当美容師さんの提案に沿ってお使いください。</p>
     </section>
 
     <section class="card">
@@ -113,7 +72,7 @@
         <li>パサつき・広がりで清潔感が出しづらい</li>
         <li>サロン後の手触りを自宅でも維持したい</li>
       </ul>
-      <p class="small">※ 体感には個人差があります。担当美容師さんの提案に沿ってお使いください。</p>
+      <img class="full-img" src="../assets/images/usage_daily.png" alt="毎日のヘアケアを続ける生活シーン" style="margin-top:14px;" />
     </section>
 
     <section class="card">
@@ -130,7 +89,6 @@
     const code = (params.get('code') || '').trim();
     const shop = document.getElementById('shopCta');
     const codeText = document.getElementById('codeText');
-
     if (code) {
       shop.href = `https://shop.self138.com/?code=${encodeURIComponent(code)}&utm_source=salon_touch&utm_medium=nfc&utm_campaign=shop`;
       codeText.textContent = code;
