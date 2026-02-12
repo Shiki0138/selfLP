@@ -3,62 +3,135 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>2分ヘアチェック | self</title>
-  <meta name="description" content="美容師さんのおすすめで始める2分ヘアチェック。今の髪状態とあなた向けケアのヒントがわかります。" />
+  <title>美容師おすすめのselfヘアケア | 公式案内</title>
+  <meta name="description" content="美容師が店頭でおすすめするselfシャンプー。普通のシャンプーとの違い、体感ポイント、紹介コード特典をわかりやすくご案内します。" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
-    :root { --bg:#f8f6f3; --card:#fff; --text:#222; --muted:#6a6a6a; --main:#7a5b43; }
+    :root {
+      --bg: #f7f3ef;
+      --card: #ffffff;
+      --text: #222;
+      --muted: #5f5a55;
+      --main: #6f4f3d;
+      --sub: #8a6b58;
+      --line: #e6ddd6;
+    }
     * { box-sizing: border-box; }
-    body { margin:0; font-family:"Noto Sans JP", sans-serif; color:var(--text); background:var(--bg); }
-    .wrap { max-width: 760px; margin: 0 auto; padding: 24px 16px 48px; }
-    .hero { background:var(--card); border-radius:16px; padding:24px 18px; box-shadow:0 6px 24px rgba(0,0,0,.07); }
-    h1 { font-size:1.6rem; margin:0 0 10px; line-height:1.4; }
-    p { margin:0; line-height:1.75; }
-    .muted { color:var(--muted); }
-    .tag { display:inline-block; font-size:.8rem; background:#efe9e4; color:#5d4636; border-radius:999px; padding:6px 10px; margin-bottom:10px; }
-    .list { margin:16px 0 0; padding:0 0 0 1.1rem; color:var(--text); }
-    .list li { margin:8px 0; }
-    .cta { display:block; text-align:center; margin-top:18px; background:var(--main); color:#fff; text-decoration:none; padding:14px 16px; border-radius:12px; font-weight:700; }
-    .sub { background:var(--card); border-radius:16px; margin-top:16px; padding:18px; }
-    .note { margin-top:12px; font-size:.84rem; color:var(--muted); }
-    .code { font-weight:700; color:#3e2f24; }
+    body {
+      margin: 0;
+      font-family: "Noto Sans JP", sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+    }
+    .wrap {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 20px 14px 44px;
+    }
+    .card {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 22px 18px;
+      box-shadow: 0 8px 30px rgba(0,0,0,.06);
+      border: 1px solid var(--line);
+      margin-bottom: 14px;
+    }
+    .tag {
+      display: inline-block;
+      font-size: .78rem;
+      background: #efe6df;
+      color: #5e4333;
+      border-radius: 999px;
+      padding: 6px 10px;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+    h1 { margin: 0 0 10px; font-size: 1.6rem; line-height: 1.4; }
+    h2 { margin: 0 0 8px; font-size: 1.15rem; }
+    p { margin: 0; }
+    .muted { color: var(--muted); }
+    .lead { font-size: 1.03rem; }
+    ul { margin: 10px 0 0; padding-left: 1.1rem; }
+    li { margin: 7px 0; }
+    .point {
+      border-left: 4px solid #d4c0b2;
+      padding-left: 10px;
+      margin-top: 10px;
+    }
+    .cta {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      color: #fff;
+      background: linear-gradient(135deg, var(--main), var(--sub));
+      border-radius: 12px;
+      padding: 14px 16px;
+      font-weight: 700;
+      margin-top: 14px;
+    }
+    .code {
+      font-weight: 700;
+      color: #3f2e23;
+      background: #f4ece6;
+      border: 1px dashed #d4c0b2;
+      border-radius: 8px;
+      display: inline-block;
+      padding: 5px 10px;
+      margin-left: 6px;
+    }
+    .small { font-size: .84rem; color: var(--muted); margin-top: 8px; }
   </style>
 </head>
 <body>
   <main class="wrap">
-    <section class="hero">
-      <span class="tag">美容師さんからのご案内</span>
-      <h1>2分でわかる、あなた向けヘアチェック</h1>
-      <p class="muted">いまの髪状態と、毎日続けやすいケアのヒントを提案します。<br>押し売りはしません。あなたに合う選択肢だけ確認してください。</p>
-      <ul class="list">
-        <li>朝のまとまりやすさ</li>
-        <li>乾燥・うねりの傾向</li>
-        <li>生活習慣をふまえたケア提案</li>
-      </ul>
-      <a id="diagnosisCta" class="cta" href="https://hair-health-app.vercel.app/s/fleeks/form?utm_source=salon_touch&utm_medium=nfc&utm_campaign=diagnosis">無料でヘアチェックを始める</a>
-      <p class="note">※ 医療診断ではなく、ヘアカウンセリング用のチェックです。</p>
+    <section class="card">
+      <span class="tag">担当美容師さんからのご案内</span>
+      <h1>selfは「洗うだけ」ではなく、<br>毎日のケアで髪のまとまりを整えるための選択です。</h1>
+      <p class="lead muted">店頭での仕上がりを、家でのケアでも崩しにくくするために使う方が増えています。</p>
     </section>
 
-    <section class="sub">
-      <p><strong>紹介コードのある方へ</strong></p>
-      <p class="muted" style="margin-top:6px;">このページの下記コードは購入時の特典対象です。</p>
-      <p style="margin-top:10px;">紹介コード: <span id="codeText" class="code">未設定</span></p>
-      <a id="shopCta" class="cta" style="margin-top:14px;" href="https://shop.self138.com/">商品ページを見る（任意）</a>
+    <section class="card">
+      <h2>普通のシャンプーと何が違うの？</h2>
+      <div class="point">
+        <p><strong>1. 保水を意識した設計</strong><br><span class="muted">乾燥しやすい髪でも、指通りを保ちやすい。</span></p>
+      </div>
+      <div class="point">
+        <p><strong>2. 補修ケアを習慣化しやすい</strong><br><span class="muted">毎日のルーティンで、まとまり感の土台を作る。</span></p>
+      </div>
+      <div class="point">
+        <p><strong>3. 熱ケアとの相性を重視</strong><br><span class="muted">ドライヤー・アイロン前後の仕上がりを意識しやすい。</span></p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>こんな方におすすめ</h2>
+      <ul>
+        <li>朝の髪がまとまりにくく、セット時間がかかる</li>
+        <li>パサつき・広がりで清潔感が出しづらい</li>
+        <li>サロン後の手触りを自宅でも維持したい</li>
+      </ul>
+      <p class="small">※ 体感には個人差があります。担当美容師さんの提案に沿ってお使いください。</p>
+    </section>
+
+    <section class="card">
+      <h2>紹介コード特典について</h2>
+      <p class="muted">このページを案内した美容師さん経由の特典対象コードです。</p>
+      <p style="margin-top:10px;">紹介コード:<span id="codeText" class="code">未設定</span></p>
+      <a id="shopCta" class="cta" href="https://shop.self138.com/?utm_source=salon_touch&utm_medium=nfc&utm_campaign=shop">紹介コードで購入ページへ</a>
+      <p class="small">購入ページでコードが反映されているかご確認ください。</p>
     </section>
   </main>
 
   <script>
     const params = new URLSearchParams(window.location.search);
     const code = (params.get('code') || '').trim();
-
-    const diagnosis = document.getElementById('diagnosisCta');
     const shop = document.getElementById('shopCta');
     const codeText = document.getElementById('codeText');
 
     if (code) {
-      diagnosis.href = `https://hair-health-app.vercel.app/s/fleeks/form?code=${encodeURIComponent(code)}&utm_source=salon_touch&utm_medium=nfc&utm_campaign=diagnosis`;
       shop.href = `https://shop.self138.com/?code=${encodeURIComponent(code)}&utm_source=salon_touch&utm_medium=nfc&utm_campaign=shop`;
       codeText.textContent = code;
     }
