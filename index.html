@@ -16,6 +16,13 @@
     <!-- End Google Tag Manager -->
     <title>self || 魅せ髪シャンプー</title>
     <meta name="description" content="大事な日には、いつもより潤いを。「魅せ髪シャンプー」という選択。美容液泡パックで叶える新感覚ヘアケア。">
+    <meta property="og:title" content="self || 魅せ髪シャンプー">
+    <meta property="og:description" content="大事な日には、いつもより潤いを。美容液泡パックで叶える新感覚ヘアケア。全国100店舗以上の美容室で導入。">
+    <meta property="og:image" content="https://self138.com/assets/images/product_set.png">
+    <meta property="og:url" content="https://self138.com">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="self">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -107,18 +114,6 @@
             font-weight: normal;
         }
 
-        .campaign-discount-badge {
-            display: inline-block;
-            background: linear-gradient(135deg, #c41e3a, #e74c5e);
-            color: #fff;
-            padding: 8px 20px;
-            border-radius: 8px;
-            font-size: 0.95rem;
-            font-weight: bold;
-            margin-bottom: 20px;
-            animation: pulse 1.5s ease-in-out infinite;
-        }
-
         .product-benefits {
             text-align: left;
             background: #fafafa;
@@ -182,26 +177,87 @@
             animation: shine 2s ease-in-out infinite;
         }
 
-        .coupon-reminder {
-            margin-top: 15px;
-            padding: 12px;
-            background: #fff8f0;
-            border-radius: 8px;
-            border: 2px dashed #c41e3a;
+        /* Philosophy Section (引き算) */
+        .philosophy-section {
+            padding: 70px 0;
+            background: #fff;
         }
 
-        .coupon-reminder p {
-            margin: 0;
-            font-size: 0.85rem;
-            color: #666;
+        .philosophy-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            max-width: 900px;
+            margin: 0 auto;
         }
 
-        .coupon-reminder .code {
-            font-family: 'Courier New', monospace;
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #c41e3a;
+        .philosophy-image {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .philosophy-image img {
+            width: 100%;
+            border-radius: 12px;
+        }
+
+        .philosophy-text {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .philosophy-label {
+            font-size: 0.8rem;
+            color: var(--accent-color);
             letter-spacing: 0.15em;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+
+        .philosophy-title {
+            font-size: 1.6rem;
+            font-family: var(--font-serif);
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .philosophy-desc {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 2;
+            margin-bottom: 25px;
+        }
+
+        .philosophy-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .philosophy-list li {
+            font-size: 0.8rem;
+            color: #888;
+            padding: 6px 14px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .philosophy-content {
+                flex-direction: column;
+                gap: 30px;
+                padding: 0 15px;
+            }
+
+            .philosophy-title {
+                font-size: 1.3rem;
+            }
+
+            .philosophy-section {
+                padding: 50px 0;
+            }
         }
 
         /* Single Products Section */
@@ -359,8 +415,8 @@
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section class="hero">
+        <!-- 1. Hero Section (shortened on mobile) -->
+        <section class="hero" data-section="hero">
             <div class="hero-bg"></div>
             <div class="hero-content container">
                 <p class="hero-sub">その自信は、髪から生まれる。</p>
@@ -370,67 +426,96 @@
             </div>
         </section>
 
-        <!-- Campaign Section (12/28まで表示) -->
-        <section id="campaign-section" class="campaign-section">
+        <!-- 2. Social Proof Strip (NEW) -->
+        <section class="social-proof-strip" data-section="social_proof">
             <div class="container">
-                <div class="campaign-card">
-                    <div class="campaign-header">
-                        <span class="campaign-label">期間限定</span>
-                        <span class="campaign-period">〜 12/28（土）まで</span>
+                <div class="proof-items">
+                    <div class="proof-item">
+                        <div class="proof-number">100+</div>
+                        <div class="proof-label">美容室で導入</div>
                     </div>
-                    <h3 class="campaign-title">12月リニューアルキャンペーン</h3>
-                    <p class="campaign-desc">selfのリニューアルを記念して、<br>シャンプー＆トリートメントセット購入で <strong>500円OFF</strong>！</p>
-                    <div class="campaign-coupon">
-                        <span class="coupon-label">クーポンコード</span>
-                        <span class="coupon-code">0138</span>
+                    <div class="proof-item">
+                        <div class="proof-number">91%</div>
+                        <div class="proof-label">リピート率</div>
                     </div>
-                    <p class="campaign-note">※ご購入時にクーポンコードをご入力ください</p>
-                    <a href="#product" class="btn-campaign-main">今すぐ購入する</a>
-                    <p class="campaign-deadline">※12月28日で割引は終了します</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- News Section (年末年始お知らせ) -->
-        <section id="news-section" class="news-section">
-            <div class="container">
-                <div class="news-content">
-                    <div class="news-header">
-                        <span class="news-badge">お知らせ</span>
-                        <span class="news-date">2024.12.09</span>
+                    <div class="proof-item">
+                        <div class="proof-number">sweet</div>
+                        <div class="proof-label">雑誌掲載</div>
                     </div>
-                    <p class="news-text">
-                        <strong>年末年始の発送について：</strong>12月29日（日）〜 1月4日（土）の期間は発送業務をお休みさせていただきます。
-                        この期間中のご注文は1月5日（日）以降、順次発送いたします。
-                    </p>
                 </div>
             </div>
         </section>
 
-        <!-- Introduction (Empathy) -->
-        <section class="intro section-padding fade-in-up">
+        <!-- 3. Main Product Section: SET (Primary CTA) - MOVED UP -->
+        <section id="product" class="main-product-section fade-in-up" data-section="product">
             <div class="container">
-                <h3 class="section-title">明日は、久しぶりの同窓会。<br>来週は、大切なプレゼン。<br>そして、待ちに待ったデート。</h3>
-                <div class="intro-text">
-                    <p>特別な予定が入ると、心は躍ります。<br>でも、ふと鏡を見たとき、少しだけ不安になりませんか？</p>
-                    <p class="highlight-text">「今日の髪、大丈夫かな？」</p>
-                    <p>パサつき、うねり、まとまらない髪。<br>髪が決まらないだけで、せっかくの自信も半減してしまう。</p>
-                    <p>もし、自宅で洗うだけで<br>サロン帰りのような自信が手に入るとしたら？</p>
+                <h3 class="section-title">まずは、その「違い」を<br>あなたの髪で。</h3>
+
+                <div class="main-product-card">
+                    <span class="recommend-badge">美容師おすすめNo.1</span>
+
+                    <div class="main-product-img">
+                        <picture>
+                            <source srcset="assets/images/product_set.webp" type="image/webp">
+                            <img src="assets/images/product_set.png" alt="selfシャンプー＆トリートメントセット" loading="lazy">
+                        </picture>
+                    </div>
+
+                    <h4 class="main-product-name">selfシャンプー＆<br>トリートメントセット</h4>
+
+                    <p class="main-product-price">¥8,460 <span class="tax">(税込)</span></p>
+
+                    <ul class="product-benefits">
+                        <li>同シリーズ併用で効果を最大限発揮</li>
+                        <li>髪質改善のプロが選ぶ組み合わせ</li>
+                        <li>単品購入より継続しやすい</li>
+                        <li>91%がリピートする実力派</li>
+                    </ul>
+
+                    <a href="https://shop.self138.com/product-page/self%E3%82%B7%E3%83%A3%E3%83%B3%E3%83%97%E3%83%BC-%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%B3%E3%83%88%E3%82%BB%E3%83%83%E3%83%88-1"
+                        class="btn-purchase-main"
+                        onclick="trackPurchase('set', '3498a1aa-0541-187c-d551-be04352a8eac', 'product_section')">
+                        今すぐ購入する
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- Image Break Section -->
-        <section class="image-break section-padding fade-in-up">
+        <!-- 4. Philosophy (引き算) -->
+        <section class="philosophy-section fade-in-up" data-section="philosophy">
             <div class="container">
-                <div class="image-break-content">
-                    <img src="assets/images/generated_variation_4.png" alt="サロン帰りのような自信" class="break-img">
+                <div class="philosophy-content">
+                    <div class="philosophy-image">
+                        <picture>
+                            <source srcset="assets/images/feature_natural.webp" type="image/webp">
+                            <img src="assets/images/feature_natural.png" alt="自然由来の成分" loading="lazy">
+                        </picture>
+                    </div>
+                    <div class="philosophy-text">
+                        <p class="philosophy-label">PHILOSOPHY</p>
+                        <h3 class="philosophy-title">シャンプー開発で<br>こだわったのは「引き算」です。</h3>
+                        <p class="philosophy-desc">
+                            いいものをたくさん入れるのではなく、<br>
+                            髪と肌に不要なものを、すべて取り除く。<br>
+                            スキンケアと同じ発想で処方を設計しました。<br><br>
+                            肌に使えないものは、髪にも使わない。<br>
+                            スキンケアにこだわる大人の女性だからこそ、<br>
+                            納得できるシャンプーを。
+                        </p>
+                        <ul class="philosophy-list">
+                            <li>シリコンフリー</li>
+                            <li>パラベンフリー</li>
+                            <li>合成着色料フリー</li>
+                            <li>鉱物油フリー</li>
+                            <li>サルフェートフリー</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Solution -->
-        <section class="solution section-padding bg-light fade-in-up">
+        <!-- 5. Solution / Features -->
+        <section class="solution section-padding bg-light fade-in-up" data-section="solution">
             <div class="container">
                 <h3 class="section-title">365日、サロン帰りのような<br>「魅せ髪」へ。</h3>
                 <p class="solution-desc">
@@ -439,21 +524,30 @@
                 <div class="features">
                     <div class="feature-card">
                         <div class="feature-img-container">
-                            <img src="assets/images/feature_moisture.png" alt="潤い" class="feature-img">
+                            <picture>
+                                <source srcset="assets/images/feature_moisture.webp" type="image/webp">
+                                <img src="assets/images/feature_moisture.png" alt="潤い" class="feature-img" loading="lazy">
+                            </picture>
                         </div>
                         <h4>洗うたび、潤う</h4>
                         <p>高濃度コラーゲン配合の泡が、汚れを落としながら髪の内部に浸透。</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-img-container">
-                            <img src="assets/images/feature_heat.png" alt="熱補修" class="feature-img">
+                            <picture>
+                                <source srcset="assets/images/feature_heat.webp" type="image/webp">
+                                <img src="assets/images/feature_heat.png" alt="熱補修" class="feature-img" loading="lazy">
+                            </picture>
                         </div>
                         <h4>熱を味方に</h4>
                         <p>ドライヤーの熱に反応する補修成分が、髪のキューティクルを整え艶を出します。</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-img-container">
-                            <img src="assets/images/feature_natural.png" alt="自然成分" class="feature-img">
+                            <picture>
+                                <source srcset="assets/images/feature_natural.webp" type="image/webp">
+                                <img src="assets/images/feature_natural.png" alt="自然成分" class="feature-img" loading="lazy">
+                            </picture>
                         </div>
                         <h4>余計なものは入れない</h4>
                         <p>髪と地肌に優しい成分だけで作られた、スキンケア発想の処方。</p>
@@ -462,50 +556,84 @@
             </div>
         </section>
 
-        <!-- Usage Proposal (Smart Care) -->
-        <section class="usage-proposal section-padding fade-in-up">
+        <!-- 5. User Voices -->
+        <section class="voices section-padding bg-light fade-in-up" data-section="voices">
             <div class="container">
-                <h3 class="section-title">毎日使わなくても、大丈夫。<br>「賢い使い分け」のご提案</h3>
-                <p class="section-desc">selfは高濃度な美容液成分を配合しているため、<br>毎日使わなくても十分な効果を感じていただけます。</p>
-
-                <div class="usage-comparison">
-                    <div class="usage-card daily">
-                        <div class="usage-img-container">
-                            <img src="assets/images/usage_daily.png" alt="普段の日" class="usage-img">
+                <h3 class="section-title">「魅せ髪」を手に入れた方の声</h3>
+                <div class="voice-slider-container">
+                    <div class="voice-track">
+                        <div class="voice-card">
+                            <div class="voice-img-container">
+                                <picture><source srcset="assets/images/voice_user_1.webp" type="image/webp"><img src="assets/images/voice_user_1.png" alt="User 1" class="voice-img" loading="lazy"></picture>
+                            </div>
+                            <p class="voice-comment">「夫に『髪、綺麗になったね』と褒められました！特別な日の前日は必ずselfを使っています。」</p>
+                            <p class="voice-user">30代 女性</p>
                         </div>
-                        <h4>普段の日</h4>
-                        <p class="usage-sub">いつものシャンプー</p>
-                        <p class="usage-text">汚れを落とすことをメインに。<br>コストを抑えて日常ケア。</p>
-                    </div>
-                    <div class="usage-arrow">
-                        <span>大切な日の<br>前日は...</span>
-                        <div class="arrow-icon">➡</div>
-                    </div>
-                    <div class="usage-card special">
-                        <div class="usage-img-container">
-                            <img src="assets/images/usage_special.png" alt="特別な日の前日" class="usage-img">
+                        <div class="voice-card">
+                            <div class="voice-img-container">
+                                <picture><source srcset="assets/images/voice_user_2.webp" type="image/webp"><img src="assets/images/voice_user_2.png" alt="User 2" class="voice-img" loading="lazy"></picture>
+                            </div>
+                            <p class="voice-comment">「雨の日でも広がらないのが嬉しい。毎朝のアイロン時間が半分になりました。」</p>
+                            <p class="voice-user">40代 女性</p>
                         </div>
-                        <h4>特別な日の前日</h4>
-                        <p class="usage-sub">selfシャンプー</p>
-                        <p class="usage-text">髪に栄養を与えることをメインに。<br>美容液泡パックで集中補修。</p>
-                    </div>
-                </div>
-
-                <div class="usage-calendar-visual">
-                    <div class="calendar-note">
-                        <p>週に1〜2回の「ご褒美ケア」としても。<br>あなたのライフスタイルに合わせて、<br>無理なく続けていただけます。</p>
+                        <div class="voice-card">
+                            <div class="voice-img-container">
+                                <picture><source srcset="assets/images/voice_user_3.webp" type="image/webp"><img src="assets/images/voice_user_3.png" alt="User 3" class="voice-img" loading="lazy"></picture>
+                            </div>
+                            <p class="voice-comment">「美容室のトリートメントがいらなくなりました。自宅でこれができるなんて感動。」</p>
+                            <p class="voice-user">30代 女性</p>
+                        </div>
+                        <div class="voice-card">
+                            <div class="voice-img-container">
+                                <picture><source srcset="assets/images/voice_user_4.webp" type="image/webp"><img src="assets/images/voice_user_4.png" alt="User 4" class="voice-img" loading="lazy"></picture>
+                            </div>
+                            <p class="voice-comment">「使い続けるほどに髪が柔らかくなっていくのを実感しています。香りも癒されます。」</p>
+                            <p class="voice-user">50代 女性</p>
+                        </div>
+                        <div class="voice-card">
+                            <div class="voice-img-container">
+                                <picture><source srcset="assets/images/voice_user_5.webp" type="image/webp"><img src="assets/images/voice_user_5.png" alt="User 5" class="voice-img" loading="lazy"></picture>
+                            </div>
+                            <p class="voice-comment">「パサつきが気にならなくなり、天使の輪ができるようになりました。もう手放せません。」</p>
+                            <p class="voice-user">20代 女性</p>
+                        </div>
+                        <!-- Duplicate for infinite scroll -->
+                        <div class="voice-card">
+                            <div class="voice-img-container">
+                                <picture><source srcset="assets/images/voice_user_1.webp" type="image/webp"><img src="assets/images/voice_user_1.png" alt="User 1" class="voice-img" loading="lazy"></picture>
+                            </div>
+                            <p class="voice-comment">「夫に『髪、綺麗になったね』と褒められました！特別な日の前日は必ずselfを使っています。」</p>
+                            <p class="voice-user">30代 女性</p>
+                        </div>
+                        <div class="voice-card">
+                            <div class="voice-img-container">
+                                <picture><source srcset="assets/images/voice_user_2.webp" type="image/webp"><img src="assets/images/voice_user_2.png" alt="User 2" class="voice-img" loading="lazy"></picture>
+                            </div>
+                            <p class="voice-comment">「雨の日でも広がらないのが嬉しい。毎朝のアイロン時間が半分になりました。」</p>
+                            <p class="voice-user">40代 女性</p>
+                        </div>
+                        <div class="voice-card">
+                            <div class="voice-img-container">
+                                <picture><source srcset="assets/images/voice_user_3.webp" type="image/webp"><img src="assets/images/voice_user_3.png" alt="User 3" class="voice-img" loading="lazy"></picture>
+                            </div>
+                            <p class="voice-comment">「美容室のトリートメントがいらなくなりました。自宅でこれができるなんて感動。」</p>
+                            <p class="voice-user">30代 女性</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Authority -->
-        <section class="authority section-padding fade-in-up">
+        <!-- 6. Authority + Media (combined credibility) -->
+        <section class="authority section-padding fade-in-up" data-section="authority">
             <div class="container">
                 <div class="authority-content">
                     <div class="authority-image">
-                        <img src="assets/images/salon_interior.png" alt="サロンの雰囲気"
-                            style="width: 100%; border-radius: 10px;">
+                        <picture>
+                            <source srcset="assets/images/salon_interior.webp" type="image/webp">
+                            <img src="assets/images/salon_interior.png" alt="サロンの雰囲気"
+                                style="width: 100%; border-radius: 10px;" loading="lazy">
+                        </picture>
                     </div>
                     <div class="authority-text">
                         <h3 class="section-title-sm">「自分と、大切な人のために作りました」</h3>
@@ -521,13 +649,18 @@
             </div>
         </section>
 
-        <!-- Media Section -->
-        <section class="media-section section-padding fade-in-up">
+        <section class="media-section section-padding fade-in-up" data-section="media">
             <div class="container">
                 <div class="media-content">
                     <div class="media-images">
-                        <img src="assets/images/media_sweet_article.jpg" alt="Sweet Article" class="media-article">
-                        <img src="assets/images/media_sweet_cover.jpg" alt="Sweet Cover" class="media-cover">
+                        <picture>
+                            <source srcset="assets/images/media_sweet_article.webp" type="image/webp">
+                            <img src="assets/images/media_sweet_article.jpg" alt="Sweet Article" class="media-article" loading="lazy">
+                        </picture>
+                        <picture>
+                            <source srcset="assets/images/media_sweet_cover.webp" type="image/webp">
+                            <img src="assets/images/media_sweet_cover.jpg" alt="Sweet Cover" class="media-cover" loading="lazy">
+                        </picture>
                     </div>
                     <div class="media-text">
                         <p class="media-label">人気雑誌『sweet』掲載</p>
@@ -543,121 +676,51 @@
             </div>
         </section>
 
-        <!-- User Voices -->
-        <section class="voices section-padding bg-light fade-in-up">
+        <!-- 7. Usage Proposal (Smart Care) -->
+        <section class="usage-proposal section-padding fade-in-up" data-section="usage">
             <div class="container">
-                <h3 class="section-title">「魅せ髪」を手に入れた方の声</h3>
-                <div class="voice-slider-container">
-                    <div class="voice-track">
-                        <div class="voice-card">
-                            <div class="voice-img-container">
-                                <img src="assets/images/voice_user_1.png" alt="User 1" class="voice-img">
-                            </div>
-                            <p class="voice-comment">「夫に『髪、綺麗になったね』と褒められました！特別な日の前日は必ずselfを使っています。」</p>
-                            <p class="voice-user">30代 女性</p>
+                <h3 class="section-title">毎日使わなくても、大丈夫。<br>「賢い使い分け」のご提案</h3>
+                <p class="section-desc">selfは高濃度な美容液成分を配合しているため、<br>毎日使わなくても十分な効果を感じていただけます。</p>
+
+                <div class="usage-comparison">
+                    <div class="usage-card daily">
+                        <div class="usage-img-container">
+                            <picture>
+                                <source srcset="assets/images/usage_daily.webp" type="image/webp">
+                                <img src="assets/images/usage_daily.png" alt="普段の日" class="usage-img" loading="lazy">
+                            </picture>
                         </div>
-                        <div class="voice-card">
-                            <div class="voice-img-container">
-                                <img src="assets/images/voice_user_2.png" alt="User 2" class="voice-img">
-                            </div>
-                            <p class="voice-comment">「雨の日でも広がらないのが嬉しい。毎朝のアイロン時間が半分になりました。」</p>
-                            <p class="voice-user">40代 女性</p>
+                        <h4>普段の日</h4>
+                        <p class="usage-sub">いつものシャンプー</p>
+                        <p class="usage-text">汚れを落とすことをメインに。<br>コストを抑えて日常ケア。</p>
+                    </div>
+                    <div class="usage-arrow">
+                        <span>大切な日の<br>前日は...</span>
+                        <div class="arrow-icon">➡</div>
+                    </div>
+                    <div class="usage-card special">
+                        <div class="usage-img-container">
+                            <picture>
+                                <source srcset="assets/images/usage_special.webp" type="image/webp">
+                                <img src="assets/images/usage_special.png" alt="特別な日の前日" class="usage-img" loading="lazy">
+                            </picture>
                         </div>
-                        <div class="voice-card">
-                            <div class="voice-img-container">
-                                <img src="assets/images/voice_user_3.png" alt="User 3" class="voice-img">
-                            </div>
-                            <p class="voice-comment">「美容室のトリートメントがいらなくなりました。自宅でこれができるなんて感動。」</p>
-                            <p class="voice-user">30代 女性</p>
-                        </div>
-                        <div class="voice-card">
-                            <div class="voice-img-container">
-                                <img src="assets/images/voice_user_4.png" alt="User 4" class="voice-img">
-                            </div>
-                            <p class="voice-comment">「使い続けるほどに髪が柔らかくなっていくのを実感しています。香りも癒されます。」</p>
-                            <p class="voice-user">50代 女性</p>
-                        </div>
-                        <div class="voice-card">
-                            <div class="voice-img-container">
-                                <img src="assets/images/voice_user_5.png" alt="User 5" class="voice-img">
-                            </div>
-                            <p class="voice-comment">「パサつきが気にならなくなり、天使の輪ができるようになりました。もう手放せません。」</p>
-                            <p class="voice-user">20代 女性</p>
-                        </div>
-                        <!-- Duplicate for infinite scroll -->
-                        <div class="voice-card">
-                            <div class="voice-img-container">
-                                <img src="assets/images/voice_user_1.png" alt="User 1" class="voice-img">
-                            </div>
-                            <p class="voice-comment">「夫に『髪、綺麗になったね』と褒められました！特別な日の前日は必ずselfを使っています。」</p>
-                            <p class="voice-user">30代 女性</p>
-                        </div>
-                        <div class="voice-card">
-                            <div class="voice-img-container">
-                                <img src="assets/images/voice_user_2.png" alt="User 2" class="voice-img">
-                            </div>
-                            <p class="voice-comment">「雨の日でも広がらないのが嬉しい。毎朝のアイロン時間が半分になりました。」</p>
-                            <p class="voice-user">40代 女性</p>
-                        </div>
-                        <div class="voice-card">
-                            <div class="voice-img-container">
-                                <img src="assets/images/voice_user_1.png" alt="User 3" class="voice-img">
-                            </div>
-                            <p class="voice-comment">「美容室のトリートメントがいらなくなりました。自宅でこれができるなんて感動。」</p>
-                            <p class="voice-user">30代 女性</p>
-                        </div>
+                        <h4>特別な日の前日</h4>
+                        <p class="usage-sub">selfシャンプー</p>
+                        <p class="usage-text">髪に栄養を与えることをメインに。<br>美容液泡パックで集中補修。</p>
+                    </div>
+                </div>
+
+                <div class="usage-calendar-visual">
+                    <div class="calendar-note">
+                        <p>週に1〜2回の「ご褒美ケア」としても。<br>あなたのライフスタイルに合わせて、<br>無理なく続けていただけます。</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ========================================== -->
-        <!-- Main Product Section: SET (Primary CTA) -->
-        <!-- ========================================== -->
-        <section id="product" class="main-product-section fade-in-up">
-            <div class="container">
-                <h3 class="section-title">まずは、その「違い」を<br>あなたの髪で。</h3>
-
-                <div class="main-product-card">
-                    <span class="recommend-badge">美容師おすすめNo.1</span>
-
-                    <div class="main-product-img">
-                        <img src="assets/images/product_set.png" alt="selfシャンプー＆トリートメントセット">
-                    </div>
-
-                    <h4 class="main-product-name">selfシャンプー＆<br>トリートメントセット</h4>
-
-                    <p class="main-product-price">¥8,460 <span class="tax">(税込)</span></p>
-
-                    <div class="campaign-discount-badge">
-                        🎉 リニューアル記念 500円OFF
-                    </div>
-
-                    <ul class="product-benefits">
-                        <li>同シリーズ併用で効果を最大限発揮</li>
-                        <li>髪質改善のプロが選ぶ組み合わせ</li>
-                        <li>単品購入より継続しやすい</li>
-                        <li>91%がリピートする実力派</li>
-                    </ul>
-
-                    <!-- 商品ページへ直接リンク -->
-                    <a href="https://shop.self138.com/product-page/self%E3%82%B7%E3%83%A3%E3%83%B3%E3%83%97%E3%83%BC-%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%B3%E3%83%88%E3%82%BB%E3%83%83%E3%83%88-1"
-                        class="btn-purchase-main"
-                        onclick="trackPurchase('set', '3498a1aa-0541-187c-d551-be04352a8eac')">
-                        🛒 今すぐ購入する
-                    </a>
-
-                    <div class="coupon-reminder">
-                        <p>購入時にクーポンコード <span class="code">0138</span> を入力で500円OFF！</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ========================================== -->
-        <!-- Single Products Section (Secondary) -->
-        <!-- ========================================== -->
-        <section class="single-products-section fade-in-up">
+        <!-- 8. Single Products (Secondary) -->
+        <section class="single-products-section fade-in-up" data-section="single_products">
             <div class="container">
                 <div class="single-products-header">
                     <h3>まずは単品から試したい方へ</h3>
@@ -665,39 +728,42 @@
                 </div>
 
                 <div class="single-products-grid">
-                    <!-- Shampoo -->
                     <div class="single-product-card">
-                        <img src="assets/images/product_shampoo.png" alt="selfシャンプー">
+                        <picture>
+                            <source srcset="assets/images/product_shampoo.webp" type="image/webp">
+                            <img src="assets/images/product_shampoo.png" alt="selfシャンプー" loading="lazy">
+                        </picture>
                         <h4>selfシャンプー</h4>
                         <p class="price">¥3,980 <span class="tax">(税込)</span></p>
                         <a href="https://shop.self138.com/product-page/self%E3%82%B7%E3%83%A3%E3%83%B3%E3%83%97%E3%83%BC-%E3%83%9C%E3%83%88%E3%83%AB-%E8%A9%B0%E6%9B%BF%E7%94%A8"
                             class="btn-purchase-single"
-                            onclick="trackPurchase('shampoo', 'bce1a0c5-8cb5-eee6-6956-1324760b5e47')">
+                            onclick="trackPurchase('shampoo', 'bce1a0c5-8cb5-eee6-6956-1324760b5e47', 'single_products')">
                             購入する
                         </a>
                     </div>
-
-                    <!-- Treatment -->
                     <div class="single-product-card">
-                        <img src="assets/images/product_treatment.png" alt="selfトリートメント">
+                        <picture>
+                            <source srcset="assets/images/product_treatment.webp" type="image/webp">
+                            <img src="assets/images/product_treatment.png" alt="selfトリートメント" loading="lazy">
+                        </picture>
                         <h4>selfトリートメント</h4>
                         <p class="price">¥4,480 <span class="tax">(税込)</span></p>
                         <a href="https://shop.self138.com/product-page/self%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%B3%E3%83%88-%E3%83%9C%E3%83%88%E3%83%AB-%E8%A9%B0%E6%9B%BF%E7%94%A8"
                             class="btn-purchase-single"
-                            onclick="trackPurchase('treatment', 'cf14aa0a-9c70-65a2-ace8-6fabe635a681')">
+                            onclick="trackPurchase('treatment', 'cf14aa0a-9c70-65a2-ace8-6fabe635a681', 'single_products')">
                             購入する
                         </a>
                     </div>
-
-                    <!-- Hair Oil -->
                     <div class="single-product-card">
-                        <img src="assets/images/product_oil.png" alt="selfヘアオイル">
-                        <h4>selfヘアオイル<br><span style="font-size:0.75rem; font-weight:normal;">(洗い流さないトリートメント)</span>
-                        </h4>
+                        <picture>
+                            <source srcset="assets/images/product_oil.webp" type="image/webp">
+                            <img src="assets/images/product_oil.png" alt="selfヘアオイル" loading="lazy">
+                        </picture>
+                        <h4>selfヘアオイル<br><span style="font-size:0.75rem; font-weight:normal;">(洗い流さないトリートメント)</span></h4>
                         <p class="price">¥3,500 <span class="tax">(税込)</span></p>
                         <a href="https://shop.self138.com/product-page/self%E3%83%98%E3%82%A2%E3%82%AA%E3%82%A4%E3%83%AB-%E6%B5%81%E3%81%95%E3%81%AA%E3%81%84%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%B3%E3%83%88"
                             class="btn-purchase-single"
-                            onclick="trackPurchase('oil', 'a40c85ef-86af-02a3-1197-4c369bbfa8c5')">
+                            onclick="trackPurchase('oil', 'a40c85ef-86af-02a3-1197-4c369bbfa8c5', 'single_products')">
                             購入する
                         </a>
                     </div>
@@ -705,35 +771,8 @@
             </div>
         </section>
 
-        <!-- Brand Story -->
-        <section class="brand-story section-padding fade-in-up">
-            <div class="container">
-                <div class="story-content">
-                    <h3 class="story-title">鏡を見るのが、<br>楽しみになる。</h3>
-                    <p class="story-text">
-                        髪が決まると、服選びが楽しくなる。<br>
-                        メイクが少し上手くいく。<br>
-                        背筋が伸びて、歩き出したくなる。
-                    </p>
-                    <p class="story-text">
-                        selfが提供したいのは、<br>
-                        ただの「綺麗な髪」ではありません。<br>
-                        その先にある、<br>
-                        <strong>「自分を好きになれる瞬間」</strong>です。
-                    </p>
-                    <p class="story-text">
-                        あなたの大切な日が、<br>
-                        最高の一日になりますように。
-                    </p>
-                    <div class="story-sign">
-                        <p>self 開発チーム一同</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ -->
-        <section class="faq section-padding bg-light">
+        <!-- 9. FAQ -->
+        <section class="faq section-padding bg-light" data-section="faq">
             <div class="container">
                 <h3 class="section-title">よくあるご質問</h3>
                 <div class="faq-grid">
@@ -809,7 +848,7 @@
 
     <footer class="site-footer">
         <div class="container">
-            <p>&copy; 2024 self. All Rights Reserved.</p>
+            <p>&copy; 2025 self. All Rights Reserved.</p>
             <div class="footer-cta-pc">
                 <a href="#product" class="btn-main">商品を見る</a>
             </div>
@@ -823,86 +862,130 @@
     <!-- Sticky Footer for Mobile -->
     <div class="sticky-footer">
         <a href="https://shop.self138.com/product-page/self%E3%82%B7%E3%83%A3%E3%83%B3%E3%83%97%E3%83%BC-%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%B3%E3%83%88%E3%82%BB%E3%83%83%E3%83%88-1"
-            class="btn-sticky" onclick="trackPurchase('set', '3498a1aa-0541-187c-d551-be04352a8eac')">
-            セットを購入する
+            class="btn-sticky" onclick="trackPurchase('set', '3498a1aa-0541-187c-d551-be04352a8eac', 'sticky')">
+            セットを購入する ¥8,460
         </a>
     </div>
 
     <script>
         /* ================================================
-         * Purchase Tracking for GTM
+         * UTM Parameter Handling
          * ================================================ */
-        function trackPurchase(productName, productId) {
+        (function () {
+            var params = new URLSearchParams(window.location.search);
+            var utmKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
+            var utmParams = {};
+            utmKeys.forEach(function (key) {
+                var val = params.get(key);
+                if (val) utmParams[key] = val;
+            });
+            if (Object.keys(utmParams).length > 0) {
+                sessionStorage.setItem('self_utm', JSON.stringify(utmParams));
+            }
+        })();
+
+        function getUtmString() {
+            try {
+                var stored = JSON.parse(sessionStorage.getItem('self_utm') || '{}');
+                var parts = [];
+                for (var key in stored) {
+                    parts.push(encodeURIComponent(key) + '=' + encodeURIComponent(stored[key]));
+                }
+                return parts.length > 0 ? parts.join('&') : '';
+            } catch (e) { return ''; }
+        }
+
+        function appendUtmToLinks() {
+            var utm = getUtmString();
+            if (!utm) return;
+            document.querySelectorAll('a[href*="shop.self138.com"]').forEach(function (link) {
+                var href = link.getAttribute('href');
+                var separator = href.indexOf('?') === -1 ? '?' : '&';
+                link.setAttribute('href', href + separator + utm);
+            });
+        }
+
+        /* ================================================
+         * Purchase Tracking for GTM (improved)
+         * ================================================ */
+        function trackPurchase(productName, productId, ctaLocation) {
             if (typeof dataLayer !== 'undefined') {
                 dataLayer.push({
                     'event': 'add_to_cart',
                     'product_id': productId,
                     'product_name': productName,
+                    'cta_location': ctaLocation || 'unknown',
                     'source': 'top_page'
                 });
             }
+            // Use sendBeacon to ensure event fires before navigation
+            if (navigator.sendBeacon && typeof dataLayer !== 'undefined') {
+                navigator.sendBeacon(
+                    'https://www.google-analytics.com/collect',
+                    'v=1&t=event&ec=purchase_click&ea=' + productName + '&el=' + (ctaLocation || 'unknown')
+                );
+            }
         }
 
-        // Campaign & News Date Control
-        (function () {
-            const now = new Date();
-            const campaignEndDate = new Date('2025-12-28T23:59:59+09:00');
-
-            // Campaign Section (12/28まで表示)
-            const campaignSection = document.getElementById('campaign-section');
-            if (now <= campaignEndDate && campaignSection) {
-                campaignSection.classList.add('active');
-            }
-
-            // News Section (1/5まで表示)
-            const newsSection = document.getElementById('news-section');
-            const newsEndDate = new Date('2025-01-05T23:59:59+09:00');
-            if (now <= newsEndDate && newsSection) {
-                newsSection.classList.add('active');
-            }
-        })();
-
-        // Fade-in animation
         document.addEventListener('DOMContentLoaded', function () {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
+            // Append UTM params to all shop links
+            appendUtmToLinks();
+
+            /* ================================================
+             * Section Visibility Tracking
+             * ================================================ */
+            var trackedSections = {};
+            var sectionObserver = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
                     if (entry.isIntersecting) {
+                        var sectionName = entry.target.getAttribute('data-section') ||
+                            entry.target.className.split(' ')[0] || 'unknown';
+                        if (!trackedSections[sectionName] && typeof dataLayer !== 'undefined') {
+                            trackedSections[sectionName] = true;
+                            dataLayer.push({
+                                'event': 'section_view',
+                                'section_name': sectionName
+                            });
+                        }
+                        // Fade-in animation
                         entry.target.classList.add('visible');
                     }
                 });
-            }, {
-                threshold: 0.1
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.fade-in-up, [data-section]').forEach(function (el) {
+                sectionObserver.observe(el);
             });
 
-            document.querySelectorAll('.fade-in-up').forEach(el => {
-                observer.observe(el);
-            });
-
-            /* FAQ Accordion */
-            const faqItems = document.querySelectorAll('.faq-item');
-
-            faqItems.forEach(item => {
-                const question = item.querySelector('.faq-question');
-                const answer = item.querySelector('.faq-answer');
-
-                question.addEventListener('click', () => {
-                    const isActive = item.classList.contains('active');
-
-                    // Close all other items
-                    faqItems.forEach(otherItem => {
+            /* ================================================
+             * FAQ Accordion with tracking
+             * ================================================ */
+            var faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(function (item) {
+                var question = item.querySelector('.faq-question');
+                var answer = item.querySelector('.faq-answer');
+                question.addEventListener('click', function () {
+                    var isActive = item.classList.contains('active');
+                    faqItems.forEach(function (otherItem) {
                         if (otherItem !== item) {
                             otherItem.classList.remove('active');
                             otherItem.querySelector('.faq-answer').style.maxHeight = null;
                         }
                     });
-
-                    // Toggle current item
                     if (isActive) {
                         item.classList.remove('active');
                         answer.style.maxHeight = null;
                     } else {
                         item.classList.add('active');
-                        answer.style.maxHeight = answer.scrollHeight + "px";
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                        // Track FAQ interaction
+                        if (typeof dataLayer !== 'undefined') {
+                            var qText = question.querySelector('h4');
+                            dataLayer.push({
+                                'event': 'faq_open',
+                                'faq_question': qText ? qText.textContent.trim().substring(0, 50) : 'unknown'
+                            });
+                        }
                     }
                 });
             });
