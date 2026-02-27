@@ -1,0 +1,1276 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>self｜縮毛矯正・髪質改善をしている人専用ホームケアシャンプー</title>
+    <meta name="description" content="全国100店舗以上の髪質改善サロンが採用。美容師が1年以上かけて本気で開発したホームケアシャンプー。リピート率91%。ペリセア・エルカラクトン配合。">
+    <meta property="og:title" content="self｜美容師が本気で作った髪質改善ホームケア">
+    <meta property="og:description" content="縮毛矯正・髪質改善をしている人専用。全国100店舗以上が採用、リピート率91%のシャンプー＆トリートメント。">
+    <meta property="og:image" content="https://self138.com/assets/images/product_set.png">
+    <meta property="og:url" content="https://self138.com/lp/lp01.html">
+    <meta property="og:type" content="website">
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-W8X5RBK');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Shippori+Mincho:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* ===== Design Tokens (from brand) ===== */
+        :root {
+            --primary: #333;
+            --accent: #D4AF37;
+            --accent-light: #f4d03f;
+            --bg-warm: #fffbf0;
+            --bg-light: #f9f9f9;
+            --text: #444;
+            --text-dark: #222;
+            --text-muted: #888;
+            --white: #fff;
+            --font-serif: 'Shippori Mincho', serif;
+            --font-sans: 'Noto Sans JP', sans-serif;
+            --red: #c41e3a;
+            --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.08);
+            --shadow-gold: 0 8px 30px rgba(212, 175, 55, 0.3);
+            --radius: 16px;
+            --radius-sm: 10px;
+            --radius-full: 50px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            color: var(--text);
+            line-height: 1.8;
+            background: var(--white);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: var(--font-serif);
+            font-weight: 500;
+            letter-spacing: 0.03em;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ===== Animations ===== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(24px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: 200% 0;
+            }
+
+            100% {
+                background-position: -200% 0;
+            }
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.04);
+            }
+        }
+
+        @keyframes glow {
+
+            0%,
+            100% {
+                box-shadow: var(--shadow-gold);
+            }
+
+            50% {
+                box-shadow: 0 8px 40px rgba(212, 175, 55, 0.5);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== Header (minimal) ===== */
+        .lp-header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 12px 0;
+            z-index: 100;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .lp-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .lp-logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: var(--primary);
+            letter-spacing: 0.05em;
+        }
+
+        .header-badge {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .badge-item {
+            font-size: 0.65rem;
+            color: var(--text-muted);
+            text-align: center;
+            line-height: 1.3;
+        }
+
+        .badge-item strong {
+            display: block;
+            font-size: 0.95rem;
+            color: var(--accent);
+            font-family: var(--font-serif);
+        }
+
+        /* ===== HERO / First View (3秒ルール) ===== */
+        .hero-lp {
+            padding: 100px 0 60px;
+            background: linear-gradient(180deg, var(--bg-warm) 0%, var(--white) 100%);
+            text-align: center;
+        }
+
+        .hero-target-label {
+            display: inline-block;
+            background: var(--red);
+            color: var(--white);
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 6px 18px;
+            border-radius: var(--radius-full);
+            letter-spacing: 0.08em;
+            margin-bottom: 20px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .hero-headline {
+            font-size: 1.6rem;
+            line-height: 1.7;
+            color: var(--text-dark);
+            margin-bottom: 16px;
+        }
+
+        .hero-headline em {
+            font-style: normal;
+            background: linear-gradient(transparent 60%, rgba(212, 175, 55, 0.25) 60%);
+        }
+
+        .hero-sub {
+            font-size: 0.95rem;
+            color: var(--text);
+            line-height: 1.9;
+            margin-bottom: 30px;
+        }
+
+        .hero-product-img {
+            max-width: 280px;
+            margin: 0 auto 30px;
+        }
+
+        /* ===== Authority Badges ===== */
+        .authority-strip {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 35px;
+        }
+
+        .auth-badge {
+            background: var(--white);
+            border: 1px solid #e8e0cc;
+            border-radius: var(--radius-sm);
+            padding: 12px 18px;
+            text-align: center;
+            min-width: 90px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .auth-badge-number {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--accent);
+            font-family: var(--font-serif);
+            line-height: 1.2;
+        }
+
+        .auth-badge-label {
+            font-size: 0.65rem;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
+        /* ===== Dual CTA (3択出口設計) ===== */
+        .cta-section {
+            padding: 0 0 60px;
+            text-align: center;
+        }
+
+        .cta-choices {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            max-width: 420px;
+            margin: 0 auto;
+        }
+
+        .cta-btn {
+            display: block;
+            padding: 18px 20px;
+            border-radius: var(--radius);
+            font-size: 1rem;
+            font-weight: 700;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            border: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            opacity: 1;
+        }
+
+        /* Primary: 公式ECセット */
+        .cta-primary {
+            background: linear-gradient(135deg, var(--accent), var(--accent-light), var(--accent));
+            background-size: 200% 100%;
+            color: var(--primary);
+            box-shadow: var(--shadow-gold);
+            animation: glow 3s ease-in-out infinite, shimmer 4s linear infinite;
+        }
+
+        .cta-primary:hover {
+            box-shadow: 0 12px 40px rgba(212, 175, 55, 0.5);
+        }
+
+        .cta-primary .cta-label {
+            display: block;
+            font-size: 0.7rem;
+            font-weight: 500;
+            opacity: 0.8;
+            margin-bottom: 4px;
+        }
+
+        .cta-primary .cta-price {
+            font-size: 0.85rem;
+            font-weight: 400;
+            margin-top: 2px;
+        }
+
+        /* Secondary: Amazon */
+        .cta-secondary {
+            background: var(--white);
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .cta-secondary:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .cta-secondary .cta-label {
+            display: block;
+            font-size: 0.7rem;
+            font-weight: 400;
+            color: var(--text-muted);
+            margin-bottom: 4px;
+        }
+
+        .cta-secondary:hover .cta-label {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Tertiary: LINE */
+        .cta-tertiary {
+            background: #06C755;
+            color: var(--white);
+        }
+
+        .cta-tertiary:hover {
+            box-shadow: 0 8px 25px rgba(6, 199, 85, 0.3);
+        }
+
+        .cta-tertiary .cta-label {
+            display: block;
+            font-size: 0.7rem;
+            font-weight: 400;
+            opacity: 0.85;
+            margin-bottom: 4px;
+        }
+
+        .cta-divider {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin: 2px 0;
+        }
+
+        /* ===== Results Gallery Section ===== */
+        .results-section {
+            padding: 70px 0;
+            background: var(--bg-light);
+            text-align: center;
+        }
+
+        .section-label {
+            font-size: 0.75rem;
+            color: var(--accent);
+            letter-spacing: 0.15em;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .section-heading {
+            font-size: 1.4rem;
+            color: var(--text-dark);
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .result-card {
+            position: relative;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .result-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .result-card img {
+            width: 100%;
+            aspect-ratio: 3/4;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Shine overlay on hover */
+        .result-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 60%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+            transition: left 0.6s ease;
+            pointer-events: none;
+        }
+
+        .result-card:hover::after {
+            left: 120%;
+        }
+
+        .result-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 20px 12px 12px;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+            color: var(--white);
+            font-size: 0.75rem;
+            text-align: left;
+            letter-spacing: 0.03em;
+        }
+
+        .results-note {
+            margin-top: 30px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        /* ===== SNS口コミ Section ===== */
+        .reviews-section {
+            padding: 70px 0;
+            background: var(--white);
+            text-align: center;
+        }
+
+        .review-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            max-width: 480px;
+            margin: 0 auto;
+        }
+
+        .review-card {
+            background: var(--bg-light);
+            border-radius: var(--radius);
+            padding: 24px;
+            text-align: left;
+            position: relative;
+        }
+
+        .review-card::before {
+            content: '"';
+            position: absolute;
+            top: 8px;
+            left: 16px;
+            font-size: 3rem;
+            color: var(--accent);
+            opacity: 0.3;
+            font-family: var(--font-serif);
+            line-height: 1;
+        }
+
+        .review-text {
+            font-size: 0.9rem;
+            line-height: 1.9;
+            color: var(--text);
+            padding-left: 10px;
+        }
+
+        .review-user {
+            margin-top: 12px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            text-align: right;
+        }
+
+        /* ===== Ingredients (簡潔版) ===== */
+        .ingredients-section {
+            padding: 70px 0;
+            background: var(--bg-warm);
+        }
+
+        .ingredients-content {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .ingredients-image {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .ingredients-image img {
+            border-radius: var(--radius);
+        }
+
+        .ingredients-text {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .ingredients-text .section-label {
+            text-align: left;
+        }
+
+        .ingredients-heading {
+            font-size: 1.25rem;
+            line-height: 1.7;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+        }
+
+        .ingredient-list {
+            list-style: none;
+        }
+
+        .ingredient-list li {
+            padding: 10px 0;
+            padding-left: 24px;
+            position: relative;
+            font-size: 0.9rem;
+            color: var(--text);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .ingredient-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        .ingredient-list li:last-child {
+            border-bottom: none;
+        }
+
+        .ingredient-note {
+            margin-top: 16px;
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        /* ===== Usage Proposal (高価格の壁を除去) ===== */
+        .usage-section {
+            padding: 70px 0;
+            background: var(--white);
+            text-align: center;
+        }
+
+        .usage-grid {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 16px;
+            align-items: center;
+            max-width: 520px;
+            margin: 0 auto 30px;
+        }
+
+        .usage-card {
+            background: var(--bg-light);
+            border-radius: var(--radius);
+            padding: 24px 16px;
+            text-align: center;
+        }
+
+        .usage-card.special {
+            background: linear-gradient(135deg, var(--bg-warm), #fff);
+            border: 2px solid var(--accent);
+        }
+
+        .usage-card img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 12px;
+        }
+
+        .usage-card h4 {
+            font-size: 0.95rem;
+            margin-bottom: 6px;
+        }
+
+        .usage-card p {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .usage-arrow {
+            font-size: 0.75rem;
+            color: var(--accent);
+            font-weight: 700;
+            text-align: center;
+            line-height: 1.4;
+        }
+
+        .usage-arrow span {
+            display: block;
+            font-size: 1.5rem;
+            margin-top: 4px;
+        }
+
+        .usage-note {
+            font-size: 0.85rem;
+            color: var(--text);
+            line-height: 1.8;
+        }
+
+        /* ===== Developer Story (簡潔版) ===== */
+        .developer-section {
+            padding: 70px 0;
+            background: var(--bg-light);
+        }
+
+        .developer-content {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .developer-photo {
+            flex-shrink: 0;
+            width: 160px;
+        }
+
+        .developer-photo img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent);
+        }
+
+        .developer-text {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .developer-name {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 6px;
+        }
+
+        .developer-heading {
+            font-size: 1.2rem;
+            line-height: 1.7;
+            color: var(--text-dark);
+            margin-bottom: 16px;
+        }
+
+        .developer-desc {
+            font-size: 0.9rem;
+            line-height: 2;
+            color: var(--text);
+        }
+
+        /* ===== Final CTA ===== */
+        .final-cta-section {
+            padding: 70px 0;
+            background: linear-gradient(180deg, var(--white) 0%, var(--bg-warm) 100%);
+            text-align: center;
+        }
+
+        .final-cta-heading {
+            font-size: 1.3rem;
+            line-height: 1.7;
+            color: var(--text-dark);
+            margin-bottom: 30px;
+        }
+
+        /* ===== Floating CTA Bar ===== */
+        .floating-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.97);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 12px 20px;
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+            z-index: 100;
+            transform: translateY(100%);
+            transition: transform 0.4s ease;
+        }
+
+        .floating-cta.visible {
+            transform: translateY(0);
+        }
+
+        .floating-cta-inner {
+            max-width: 720px;
+            margin: 0 auto;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .floating-cta .cta-btn {
+            flex: 1;
+            padding: 14px 12px;
+            font-size: 0.85rem;
+        }
+
+        .floating-cta .cta-primary {
+            animation: none;
+            background: linear-gradient(135deg, var(--accent), var(--accent-light));
+        }
+
+        .floating-cta .cta-secondary {
+            flex: 0.7;
+            padding: 14px 10px;
+            font-size: 0.8rem;
+        }
+
+        .floating-cta .cta-label {
+            display: none;
+        }
+
+        /* ===== Footer ===== */
+        .lp-footer {
+            background: var(--primary);
+            color: rgba(255, 255, 255, 0.6);
+            padding: 30px 0 100px;
+            text-align: center;
+            font-size: 0.75rem;
+        }
+
+        .footer-links {
+            margin-bottom: 16px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.5);
+            margin: 0 10px;
+            font-size: 0.75rem;
+        }
+
+        .footer-links a:hover {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* ===== Responsive ===== */
+        @media (max-width: 768px) {
+            .hero-lp {
+                padding: 80px 0 40px;
+            }
+
+            .hero-headline {
+                font-size: 1.3rem;
+            }
+
+            .hero-product-img {
+                max-width: 220px;
+            }
+
+            .authority-strip {
+                gap: 12px;
+            }
+
+            .auth-badge {
+                padding: 10px 14px;
+                min-width: 80px;
+            }
+
+            .auth-badge-number {
+                font-size: 1.2rem;
+            }
+
+            .section-heading {
+                font-size: 1.2rem;
+            }
+
+            .results-grid {
+                gap: 8px;
+            }
+
+            .result-caption {
+                font-size: 0.65rem;
+                padding: 14px 8px 8px;
+            }
+
+            .ingredients-content {
+                flex-direction: column;
+                gap: 24px;
+            }
+
+            .ingredients-text .section-label {
+                text-align: center;
+            }
+
+            .ingredients-heading {
+                text-align: center;
+                font-size: 1.1rem;
+            }
+
+            .usage-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .usage-arrow {
+                transform: rotate(90deg);
+            }
+
+            .usage-arrow span {
+                font-size: 1.2rem;
+            }
+
+            .developer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .developer-photo {
+                width: 120px;
+            }
+
+            .developer-photo img {
+                width: 120px;
+                height: 120px;
+            }
+
+            .floating-cta .cta-secondary {
+                display: none;
+            }
+
+            .floating-cta .cta-btn {
+                padding: 12px 10px;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "u3axekqtzs");
+    </script>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W8X5RBK" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+
+    <!-- Header -->
+    <header class="lp-header">
+        <div class="container">
+            <span class="lp-logo">self</span>
+            <div class="header-badge">
+                <div class="badge-item"><strong>100+</strong>サロン導入</div>
+                <div class="badge-item"><strong>91%</strong>リピート率</div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. HERO: 3秒ルール FV -->
+        <section class="hero-lp" data-section="lp01_hero">
+            <div class="container">
+                <span class="hero-target-label">縮毛矯正・髪質改善をしている方へ</span>
+
+                <h1 class="hero-headline">
+                    美容師が<em>1年以上</em>かけて<br>
+                    本気で作った<br>
+                    <em>ホームケアシャンプー</em>
+                </h1>
+
+                <p class="hero-sub">
+                    全国100店舗以上の髪質改善サロンが採用。<br>
+                    リピート率91%の理由を、<br>
+                    あなたの髪で確かめてください。
+                </p>
+
+                <div class="hero-product-img">
+                    <picture>
+                        <source srcset="../assets/images/product_set.webp" type="image/webp">
+                        <img src="../assets/images/product_set.png" alt="selfシャンプー＆トリートメントセット" width="280" height="280">
+                    </picture>
+                </div>
+
+                <!-- Authority Badges: FV直下 -->
+                <div class="authority-strip">
+                    <div class="auth-badge">
+                        <div class="auth-badge-number">100+</div>
+                        <div class="auth-badge-label">美容室が採用</div>
+                    </div>
+                    <div class="auth-badge">
+                        <div class="auth-badge-number">91%</div>
+                        <div class="auth-badge-label">リピート率</div>
+                    </div>
+                    <div class="auth-badge">
+                        <div class="auth-badge-number">sweet</div>
+                        <div class="auth-badge-label">雑誌掲載</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Dual CTA (3択の出口設計) -->
+        <section class="cta-section fade-in" data-section="lp01_cta_top" id="cta-top">
+            <div class="container">
+                <div class="cta-choices">
+                    <!-- B: 本気で髪質改善（Primary = 公式EC） -->
+                    <a href="https://shop.self138.com/product-page/self%E3%82%B7%E3%83%A3%E3%83%B3%E3%83%97%E3%83%BC-%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%B3%E3%83%88%E3%82%BB%E3%83%83%E3%83%88-1"
+                        class="cta-btn cta-primary" onclick="trackCTA('official_ec_set', 'cta_top')">
+                        <span class="cta-label">✨ 本気で髪質改善に取り組みたい方へ</span>
+                        シャンプー＆トリートメントセットを購入
+                        <span class="cta-price">¥8,460（税込）送料無料 ── Amazonで2つ買うより¥700お得</span>
+                    </a>
+
+                    <div class="cta-divider">── または ──</div>
+
+                    <!-- A: まずは気軽に -->
+                    <a href="https://www.amazon.co.jp/dp/B0DJF3VRQR" class="cta-btn cta-secondary"
+                        onclick="trackCTA('amazon_single', 'cta_top')">
+                        <span class="cta-label">まずは気軽に試したい方へ</span>
+                        Amazonでシャンプー単品を購入 ¥4,480
+                    </a>
+
+                    <!-- C: LINE診断 -->
+                    <a href="#" class="cta-btn cta-tertiary" onclick="trackCTA('line_diagnostic', 'cta_top')">
+                        <span class="cta-label">購入前に相談したい方へ</span>
+                        🔍 まずは無料で髪質診断（LINE）
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Results Gallery Section -->
+        <section class="results-section fade-in" data-section="lp01_results">
+            <div class="container">
+                <p class="section-label">SALON RESULTS</p>
+                <h2 class="section-heading">サロンで実感された、<br>この仕上がり。</h2>
+
+                <div class="results-grid">
+                    <div class="result-card">
+                        <img src="../assets/images/result_01.jpg" alt="髪質改善の仕上がり 01" loading="lazy">
+                        <div class="result-caption">髪質改善ストレート</div>
+                    </div>
+                    <div class="result-card">
+                        <img src="../assets/images/result_02.jpg" alt="髪質改善の仕上がり 02" loading="lazy">
+                        <div class="result-caption">ダメージ補修ケア</div>
+                    </div>
+                    <div class="result-card">
+                        <img src="../assets/images/result_03.jpg" alt="髪質改善の仕上がり 03" loading="lazy">
+                        <div class="result-caption">ツヤ髪トリートメント</div>
+                    </div>
+                </div>
+
+                <p class="results-note">
+                    ※開発サロンでの実際のお客様の仕上がりです
+                </p>
+            </div>
+        </section>
+
+        <!-- 4. SNS口コミ Section -->
+        <section class="reviews-section fade-in" data-section="lp01_reviews">
+            <div class="container">
+                <p class="section-label">REAL VOICES</p>
+                <h2 class="section-heading">実際に使った方の声</h2>
+
+                <div class="review-cards">
+                    <div class="review-card">
+                        <p class="review-text">夫に「髪、綺麗になったね」と褒められました！特別な日の前日は必ずselfを使っています。</p>
+                        <p class="review-user">30代女性・髪質改善サロン通い</p>
+                    </div>
+                    <div class="review-card">
+                        <p class="review-text">雨の日でも広がらないのが嬉しい。毎朝のアイロン時間が半分になりました。縮毛矯正との相性が抜群。</p>
+                        <p class="review-user">40代女性・縮毛矯正歴10年</p>
+                    </div>
+                    <div class="review-card">
+                        <p class="review-text">美容室のトリートメントがいらなくなりました。週1回の美容液泡パックで、この仕上がりは感動。</p>
+                        <p class="review-user">30代女性・カラーダメージ悩み</p>
+                    </div>
+                    <div class="review-card">
+                        <p class="review-text">パサつきが気にならなくなり、天使の輪ができるようになりました。もう手放せません。</p>
+                        <p class="review-user">20代女性・乾燥毛</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Ingredients (簡潔な納得感) -->
+        <section class="ingredients-section fade-in" data-section="lp01_ingredients">
+            <div class="container">
+                <div class="ingredients-content">
+                    <div class="ingredients-image">
+                        <picture>
+                            <source srcset="../assets/images/feature_natural.webp" type="image/webp">
+                            <img src="../assets/images/feature_natural.png" alt="スキンケア発想の処方" loading="lazy">
+                        </picture>
+                    </div>
+                    <div class="ingredients-text">
+                        <p class="section-label">INGREDIENTS</p>
+                        <h2 class="ingredients-heading">
+                            サロン専売クオリティを<br>自宅で。
+                        </h2>
+                        <ul class="ingredient-list">
+                            <li><strong>ペリセア</strong> ── 約1分で髪内部に浸透する補修成分</li>
+                            <li><strong>エルカラクトン</strong> ── ドライヤーの熱で髪を補修</li>
+                            <li><strong>高濃度コラーゲン</strong> ── 美容液泡パックの核</li>
+                            <li><strong>アミノ酸系洗浄</strong> ── 髪と地肌にやさしく洗う</li>
+                            <li><strong>ヒアルロン酸・ケラチン</strong> ── スキンケア発想の保湿</li>
+                        </ul>
+                        <p class="ingredient-note">
+                            ※ペリセア（ジラウロイルグルタミン酸リシンNa）：高級サロン専売品に採用される希少原料
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Usage Proposal (高価格の壁を除去) -->
+        <section class="usage-section fade-in" data-section="lp01_usage">
+            <div class="container">
+                <p class="section-label">SMART CARE</p>
+                <h2 class="section-heading">毎日使わなくても、大丈夫。<br>「週1〜2回の特別ケア」という使い方</h2>
+
+                <div class="usage-grid">
+                    <div class="usage-card">
+                        <picture>
+                            <source srcset="../assets/images/usage_daily.webp" type="image/webp">
+                            <img src="../assets/images/usage_daily.png" alt="普段の日" loading="lazy">
+                        </picture>
+                        <h4>普段の日</h4>
+                        <p>いつものシャンプーで<br>日常ケア</p>
+                    </div>
+                    <div class="usage-arrow">
+                        大切な日の<br>前日は…
+                        <span>→</span>
+                    </div>
+                    <div class="usage-card special">
+                        <picture>
+                            <source srcset="../assets/images/usage_special.webp" type="image/webp">
+                            <img src="../assets/images/usage_special.png" alt="特別な日の前日" loading="lazy">
+                        </picture>
+                        <h4>特別な日の前日</h4>
+                        <p>selfで美容液泡パック<br>集中補修</p>
+                    </div>
+                </div>
+
+                <p class="usage-note">
+                    あなたのライフスタイルに合わせて、<br>
+                    無理なく続けていただけます。
+                </p>
+            </div>
+        </section>
+
+        <!-- 7. Developer Story (簡潔版) -->
+        <section class="developer-section fade-in" data-section="lp01_developer">
+            <div class="container">
+                <div class="developer-content">
+                    <div class="developer-photo">
+                        <picture>
+                            <source srcset="../assets/images/developer.webp" type="image/webp">
+                            <img src="../assets/images/developer.png" alt="開発者 東 恵理子" loading="lazy">
+                        </picture>
+                    </div>
+                    <div class="developer-text">
+                        <p class="developer-name">開発者：東 恵理子（髪質改善特化美容師）</p>
+                        <h2 class="developer-heading">
+                            「肌の弱い息子のために、<br>
+                            1年以上かけて作りました」
+                        </h2>
+                        <p class="developer-desc">
+                            何を使っても満足できないお客様、そして肌の弱い家族のために。
+                            成分を一つ一つ見直し、本当に必要なものだけを厳選。
+                            今では全国100店舗以上の美容室で導入いただいています。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Final CTA -->
+        <section class="final-cta-section fade-in" data-section="lp01_cta_bottom" id="cta-bottom">
+            <div class="container">
+                <h2 class="final-cta-heading">
+                    リピート率91%の理由を、<br>あなたの髪で確かめてください。
+                </h2>
+
+                <div class="cta-choices">
+                    <a href="https://shop.self138.com/product-page/self%E3%82%B7%E3%83%A3%E3%83%B3%E3%83%97%E3%83%BC-%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%B3%E3%83%88%E3%82%BB%E3%83%83%E3%83%88-1"
+                        class="cta-btn cta-primary" onclick="trackCTA('official_ec_set', 'cta_bottom')">
+                        <span class="cta-label">✨ 本気で髪質改善に取り組みたい方へ</span>
+                        シャンプー＆トリートメントセットを購入
+                        <span class="cta-price">¥8,460（税込）送料無料 ── Amazonで2つ買うより¥700お得</span>
+                    </a>
+
+                    <div class="cta-divider">── または ──</div>
+
+                    <a href="https://www.amazon.co.jp/dp/B0DJF3VRQR" class="cta-btn cta-secondary"
+                        onclick="trackCTA('amazon_single', 'cta_bottom')">
+                        <span class="cta-label">まずは気軽に試したい方へ</span>
+                        Amazonでシャンプー単品を購入 ¥4,480
+                    </a>
+
+                    <a href="#" class="cta-btn cta-tertiary" onclick="trackCTA('line_diagnostic', 'cta_bottom')">
+                        <span class="cta-label">購入前に相談したい方へ</span>
+                        🔍 まずは無料で髪質診断（LINE）
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Floating CTA Bar -->
+    <div class="floating-cta" id="floatingCta">
+        <div class="floating-cta-inner">
+            <a href="https://shop.self138.com/product-page/self%E3%82%B7%E3%83%A3%E3%83%B3%E3%83%97%E3%83%BC-%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%B3%E3%83%88%E3%82%BB%E3%83%83%E3%83%88-1"
+                class="cta-btn cta-primary" onclick="trackCTA('official_ec_set', 'floating')">
+                セットを購入 ¥8,460
+            </a>
+            <a href="https://www.amazon.co.jp/dp/B0DJF3VRQR" class="cta-btn cta-secondary"
+                onclick="trackCTA('amazon_single', 'floating')">
+                Amazon ¥4,480
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="lp-footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="/tokusho.html">特定商取引法に基づく表記</a>
+                <a href="/privacy.html">プライバシーポリシー</a>
+            </div>
+            <p>&copy; 2026 self. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // ===== UTM Parameter Passthrough =====
+        (function () {
+            const params = new URLSearchParams(window.location.search);
+            const utmKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
+            const utmParams = {};
+            utmKeys.forEach(function (key) {
+                if (params.get(key)) utmParams[key] = params.get(key);
+            });
+
+            if (Object.keys(utmParams).length > 0) {
+                const utmQuery = new URLSearchParams(utmParams).toString();
+                document.querySelectorAll('a[href*="shop.self138.com"]').forEach(function (link) {
+                    const sep = link.href.includes('?') ? '&' : '?';
+                    link.href = link.href + sep + utmQuery;
+                });
+            }
+        })();
+
+        // ===== Scroll Animations (Intersection Observer) =====
+        (function () {
+            var observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            document.querySelectorAll('.fade-in').forEach(function (el) {
+                observer.observe(el);
+            });
+        })();
+
+        // ===== Floating CTA (show after scrolling past hero) =====
+        (function () {
+            var floatingCta = document.getElementById('floatingCta');
+            var heroSection = document.querySelector('.hero-lp');
+
+            window.addEventListener('scroll', function () {
+                if (!heroSection || !floatingCta) return;
+                var heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+                if (window.scrollY > heroBottom) {
+                    floatingCta.classList.add('visible');
+                } else {
+                    floatingCta.classList.remove('visible');
+                }
+            });
+        })();
+
+        // ===== Section View Tracking =====
+        (function () {
+            var tracked = {};
+            var observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        var section = entry.target.dataset.section;
+                        if (section && !tracked[section]) {
+                            tracked[section] = true;
+                            if (window.dataLayer) {
+                                dataLayer.push({
+                                    'event': 'section_view',
+                                    'section_name': section
+                                });
+                            }
+                        }
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            document.querySelectorAll('[data-section]').forEach(function (el) {
+                observer.observe(el);
+            });
+        })();
+
+        // ===== CTA Click Tracking =====
+        function trackCTA(product, location) {
+            if (window.dataLayer) {
+                dataLayer.push({
+                    'event': 'add_to_cart',
+                    'product_type': product,
+                    'cta_location': 'lp01_' + location
+                });
+            }
+        }
+    </script>
+</body>
+
+</html>
