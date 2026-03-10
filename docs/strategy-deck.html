@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>self 月商500万円 成長戦略書</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap');
+
+  :root {
+    --black: #1a1a1a;
+    --dark: #2d2d2d;
+    --gray: #6b6b6b;
+    --light: #f5f3ef;
+    --cream: #faf8f5;
+    --accent: #b8956a;
+    --accent-dark: #96794f;
+    --red: #c0392b;
+    --green: #27ae60;
+    --blue: #2c6fbb;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    color: var(--black);
+    background: #fff;
+    line-height: 1.8;
+    font-size: 15px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ============ PAGE / SLIDE SYSTEM ============ */
+  .page {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 60px 48px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  }
+
+  .page + .page {
+    border-top: 1px solid #e0dcd6;
+  }
+
+  .page-number {
+    position: absolute;
+    bottom: 24px;
+    right: 48px;
+    font-size: 12px;
+    color: var(--gray);
+    font-weight: 300;
+  }
+
+  /* ============ COVER ============ */
+  .cover {
+    text-align: center;
+    justify-content: center;
+    background: var(--black);
+    color: #fff;
+    max-width: 100%;
+    padding: 80px 48px;
+  }
+
+  .cover .brand {
+    font-size: 14px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 32px;
+    font-weight: 500;
+  }
+
+  .cover h1 {
+    font-size: 42px;
+    font-weight: 900;
+    line-height: 1.3;
+    margin-bottom: 16px;
+    letter-spacing: -1px;
+  }
+
+  .cover .subtitle {
+    font-size: 18px;
+    font-weight: 300;
+    color: #aaa;
+    margin-bottom: 48px;
+  }
+
+  .cover .meta {
+    font-size: 13px;
+    color: #666;
+    font-weight: 300;
+  }
+
+  /* ============ TYPOGRAPHY ============ */
+  h2 {
+    font-size: 28px;
+    font-weight: 900;
+    margin-bottom: 32px;
+    line-height: 1.4;
+    letter-spacing: -0.5px;
+  }
+
+  h2 .num {
+    display: inline-block;
+    color: var(--accent);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+  }
+
+  h2 .num::after {
+    content: '';
+    display: block;
+  }
+
+  h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 28px 0 12px;
+    color: var(--dark);
+  }
+
+  p {
+    margin-bottom: 16px;
+    color: var(--dark);
+    font-weight: 400;
+  }
+
+  .lead {
+    font-size: 17px;
+    line-height: 2;
+    color: var(--gray);
+    margin-bottom: 32px;
+    font-weight: 300;
+  }
+
+  /* ============ HIGHLIGHT BOX ============ */
+  .highlight {
+    background: var(--cream);
+    border-left: 4px solid var(--accent);
+    padding: 24px 28px;
+    margin: 24px 0;
+    border-radius: 0 8px 8px 0;
+  }
+
+  .highlight p { margin-bottom: 0; }
+
+  .alert {
+    background: #fdf2f2;
+    border-left: 4px solid var(--red);
+    padding: 24px 28px;
+    margin: 24px 0;
+    border-radius: 0 8px 8px 0;
+  }
+
+  .success {
+    background: #f0faf4;
+    border-left: 4px solid var(--green);
+    padding: 24px 28px;
+    margin: 24px 0;
+    border-radius: 0 8px 8px 0;
+  }
+
+  /* ============ TABLES ============ */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0 28px;
+    font-size: 14px;
+  }
+
+  th {
+    background: var(--black);
+    color: #fff;
+    text-align: left;
+    padding: 12px 16px;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+  }
+
+  td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #e8e5e0;
+    vertical-align: top;
+  }
+
+  tr:nth-child(even) { background: var(--cream); }
+
+  .num-cell {
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--accent-dark);
+  }
+
+  /* ============ CARDS ============ */
+  .card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 24px 0;
+  }
+
+  .card {
+    background: var(--cream);
+    border-radius: 12px;
+    padding: 28px;
+  }
+
+  .card .card-label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+  }
+
+  .card .card-value {
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--black);
+    line-height: 1.2;
+  }
+
+  .card .card-desc {
+    font-size: 13px;
+    color: var(--gray);
+    margin-top: 8px;
+    font-weight: 300;
+  }
+
+  .card-full {
+    grid-column: 1 / -1;
+  }
+
+  /* ============ FLOW ============ */
+  .flow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 24px 0;
+    flex-wrap: wrap;
+  }
+
+  .flow-step {
+    background: var(--cream);
+    border-radius: 8px;
+    padding: 16px 20px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 500;
+    flex: 1;
+    min-width: 100px;
+  }
+
+  .flow-step.active {
+    background: var(--black);
+    color: #fff;
+  }
+
+  .flow-arrow {
+    font-size: 18px;
+    color: var(--gray);
+    flex-shrink: 0;
+  }
+
+  /* ============ COMPARISON ============ */
+  .comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    margin: 24px 0;
+  }
+
+  .comp-col {
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+  }
+
+  .comp-col.before {
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+  }
+
+  .comp-col.middle {
+    background: #e8f4f0;
+    border: 1px solid #b8ddd0;
+  }
+
+  .comp-col.after {
+    background: var(--black);
+    color: #fff;
+  }
+
+  .comp-col .comp-label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+  }
+
+  .comp-col.before .comp-label { color: var(--gray); }
+  .comp-col.middle .comp-label { color: var(--green); }
+  .comp-col.after .comp-label { color: var(--accent); }
+
+  .comp-col .comp-value {
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .comp-col .comp-desc {
+    font-size: 12px;
+    font-weight: 300;
+    opacity: 0.7;
+  }
+
+  /* ============ TIMELINE ============ */
+  .timeline {
+    position: relative;
+    margin: 32px 0;
+    padding-left: 32px;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #e0dcd6;
+  }
+
+  .tl-item {
+    position: relative;
+    margin-bottom: 28px;
+    padding-left: 24px;
+  }
+
+  .tl-item::before {
+    content: '';
+    position: absolute;
+    left: -28px;
+    top: 8px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 2px var(--accent);
+  }
+
+  .tl-item .tl-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+  }
+
+  .tl-item .tl-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  .tl-item .tl-desc {
+    font-size: 13px;
+    color: var(--gray);
+    font-weight: 300;
+  }
+
+  /* ============ LIST ============ */
+  .checklist {
+    list-style: none;
+    margin: 20px 0;
+  }
+
+  .checklist li {
+    padding: 12px 0 12px 32px;
+    position: relative;
+    border-bottom: 1px solid #f0ede8;
+    font-size: 14px;
+  }
+
+  .checklist li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 16px;
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--accent);
+    border-radius: 4px;
+  }
+
+  /* ============ PRINT ============ */
+  @media print {
+    .page {
+      min-height: auto;
+      page-break-after: always;
+      padding: 40px 32px;
+    }
+    .cover { page-break-after: always; }
+    body { font-size: 13px; }
+    h2 { font-size: 22px; }
+  }
+
+  @media (max-width: 640px) {
+    .page { padding: 40px 24px; }
+    .cover h1 { font-size: 28px; }
+    .card-grid { grid-template-columns: 1fr; }
+    .comparison { grid-template-columns: 1fr; }
+    h2 { font-size: 22px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============================== COVER ============================== -->
+<div class="page cover">
+  <div class="brand">self shampoo</div>
+  <h1>月商500万円<br>成長戦略書</h1>
+  <div class="subtitle">OpenClaw AI活用 / 1人運営最適化版</div>
+  <div class="meta">2026年3月 策定 &mdash; v3</div>
+</div>
+
+<!-- ============================== PAGE 1: 現状 ============================== -->
+<div class="page">
+  <h2><span class="num">01</span>現状の診断</h2>
+  <p class="lead">既存の16本の戦略ドキュメントは「年商1億円・月間広告費83万円・チーム運営」を前提に書かれている。1人で月商500万円を目指すフェーズとは根本的に合っていない。</p>
+
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-label">Instagram広告 CPA</div>
+      <div class="card-value" style="color:var(--red);">&#165;8,130</div>
+      <div class="card-desc">目標&#165;3,000の2.7倍。大赤字。</div>
+    </div>
+    <div class="card">
+      <div class="card-label">Amazonレビュー数</div>
+      <div class="card-value">31件</div>
+      <div class="card-desc">CVR飛躍の閾値100件まであと69件</div>
+    </div>
+    <div class="card">
+      <div class="card-label">LINE公式</div>
+      <div class="card-value">未開設</div>
+      <div class="card-desc">CRM基盤がない</div>
+    </div>
+    <div class="card">
+      <div class="card-label">サロン導入</div>
+      <div class="card-value">100+店舗</div>
+      <div class="card-desc">再発注の実態が見えていない</div>
+    </div>
+  </div>
+
+  <div class="alert">
+    <p>16施策を全部やれば破綻する。やらないことを決めるのが最も大事な戦略判断。</p>
+  </div>
+  <span class="page-number">1</span>
+</div>
+
+<!-- ============================== PAGE 2: 売上構成 ============================== -->
+<div class="page">
+  <h2><span class="num">02</span>月商500万円のチャネル構成</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>チャネル</th>
+        <th>月商目標</th>
+        <th>構成比</th>
+        <th>粗利率</th>
+        <th>月間粗利</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>公式EC（LP経由+リピート）</td>
+        <td class="num-cell">150万円</td>
+        <td>30%</td>
+        <td>75%</td>
+        <td>112万円</td>
+      </tr>
+      <tr>
+        <td>Amazon</td>
+        <td class="num-cell">130万円</td>
+        <td>26%</td>
+        <td>55%</td>
+        <td>71万円</td>
+      </tr>
+      <tr>
+        <td>サロン卸（B2B）</td>
+        <td class="num-cell">130万円</td>
+        <td>26%</td>
+        <td>30%</td>
+        <td>39万円</td>
+      </tr>
+      <tr>
+        <td>オーガニック / LINE</td>
+        <td class="num-cell">90万円</td>
+        <td>18%</td>
+        <td>75%</td>
+        <td>67万円</td>
+      </tr>
+      <tr style="background:var(--black);color:#fff;">
+        <td><strong>合計</strong></td>
+        <td><strong style="font-size:18px;">500万円</strong></td>
+        <td>100%</td>
+        <td></td>
+        <td><strong>289万円</strong></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-label">月間広告費</div>
+      <div class="card-value">35万円</div>
+      <div class="card-desc">Meta 20万 + Amazon SP 15万</div>
+    </div>
+    <div class="card">
+      <div class="card-label">営業利益（見込み）</div>
+      <div class="card-value" style="color:var(--green);">200万円</div>
+      <div class="card-desc">人件費除く</div>
+    </div>
+  </div>
+  <span class="page-number">2</span>
+</div>
+
+<!-- ============================== PAGE 3: OpenClawとは ============================== -->
+<div class="page">
+  <h2><span class="num">03</span>OpenClawとは何か</h2>
+
+  <p class="lead">普通のAIは「聞いたら答える辞書」。OpenClawは「頼んだら勝手に動くロボット」。寝ている間もマーケティングを回し続けてくれる。</p>
+
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-label">GitHub Stars</div>
+      <div class="card-value">250,000+</div>
+      <div class="card-desc">ReactやDockerを超えた</div>
+    </div>
+    <div class="card">
+      <div class="card-label">コミュニティスキル</div>
+      <div class="card-value">5,400+</div>
+      <div class="card-desc">マーケ、EC、SNS、CRM対応</div>
+    </div>
+    <div class="card">
+      <div class="card-label">本体価格</div>
+      <div class="card-value">0円</div>
+      <div class="card-desc">オープンソース（MIT License）</div>
+    </div>
+    <div class="card">
+      <div class="card-label">月額コスト</div>
+      <div class="card-value">3〜5万円</div>
+      <div class="card-desc">AI API料 + サーバー代</div>
+    </div>
+  </div>
+
+  <h3>LINEにネイティブ対応</h3>
+  <p>日本で2億人以上が使うLINEと直接接続。サロンへの自動応答も、消費者への髪質診断も、Lステップ不要で組める。月額2,980〜32,780円のSaaS費用が丸ごと不要になる。</p>
+
+  <h3>SNS 6プラットフォーム同時投稿</h3>
+  <p>Genviralスキル（2026年2月リリース）で、TikTok、Instagram、YouTube、Facebook、Pinterest、LinkedInに自動投稿。投稿後に再生数やいいね数を自動取得し、次のコンテンツを自動改善する。</p>
+
+  <span class="page-number">3</span>
+</div>
+
+<!-- ============================== PAGE 4: OpenClaw効果 ============================== -->
+<div class="page">
+  <h2><span class="num">04</span>OpenClawで何が変わるか</h2>
+
+  <div class="comparison">
+    <div class="comp-col before">
+      <div class="comp-label">V1（手動のみ）</div>
+      <div class="comp-value">9h</div>
+      <div class="comp-desc">週あたり作業時間</div>
+      <div style="margin-top:16px;font-size:13px;color:var(--gray);">施策4つ</div>
+    </div>
+    <div class="comp-col middle">
+      <div class="comp-label">V2（OC初期版）</div>
+      <div class="comp-value">6.5h</div>
+      <div class="comp-desc">週あたり作業時間</div>
+      <div style="margin-top:16px;font-size:13px;color:var(--dark);">施策14</div>
+    </div>
+    <div class="comp-col after">
+      <div class="comp-label">V3（OC最新版）</div>
+      <div class="comp-value">3-4h</div>
+      <div class="comp-desc">週あたり作業時間</div>
+      <div style="margin-top:16px;font-size:13px;">施策14 + 自動5</div>
+    </div>
+  </div>
+
+  <p>施策の数が増えたのに、手動作業は半分以下に。OpenClawが担当する5つの自動ワークフローがその差を生んでいる。</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>自動ワークフロー</th>
+        <th>やること</th>
+        <th>手動工数</th>
+        <th>効果</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>競合広告リサーチ</td>
+        <td>Meta Ad Libraryから競合広告を週次収集</td>
+        <td>週5分</td>
+        <td>CPA改善の判断材料</td>
+      </tr>
+      <tr>
+        <td>広告コピー自動生成</td>
+        <td>LP+競合データから広告文を生成</td>
+        <td>週15分</td>
+        <td>クリエイティブ制作時間半減</td>
+      </tr>
+      <tr>
+        <td>Meta広告24時間監視</td>
+        <td>CPA急騰を即検知しLINEに通知</td>
+        <td>週10分</td>
+        <td>ROAS 22%改善の実績</td>
+      </tr>
+      <tr>
+        <td>SNS自動投稿+分析</td>
+        <td>IG/TikTok/YouTube同時投稿+改善ループ</td>
+        <td>週0分</td>
+        <td>3プラットフォーム同時展開</td>
+      </tr>
+      <tr>
+        <td>サロンLINE自動応答</td>
+        <td>発注受付・在庫案内・月次配信</td>
+        <td>週15分</td>
+        <td>再発注率向上</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="page-number">4</span>
+</div>
+
+<!-- ============================== PAGE 5: CPA改善 ============================== -->
+<div class="page">
+  <h2><span class="num">05</span>Meta広告 CPA改善の設計</h2>
+
+  <p class="lead">CPA 8,130円を3,000円台に下げるために、OpenClawの4つのスキルを導入する。</p>
+
+  <div class="flow">
+    <div class="flow-step active">パフォーマンス監査</div>
+    <div class="flow-arrow">&rarr;</div>
+    <div class="flow-step active">クリエイティブ分析</div>
+    <div class="flow-arrow">&rarr;</div>
+    <div class="flow-step active">入札・予算調整</div>
+    <div class="flow-arrow">&rarr;</div>
+    <div class="flow-step active">オーディエンス設計</div>
+  </div>
+
+  <h3>導入は3段階</h3>
+  <div class="flow">
+    <div class="flow-step">Phase A<br><small>読み取りのみ</small><br><small>14日間</small></div>
+    <div class="flow-arrow">&rarr;</div>
+    <div class="flow-step">Phase B<br><small>提案+承認</small><br><small>30日間</small></div>
+    <div class="flow-arrow">&rarr;</div>
+    <div class="flow-step active">Phase C<br><small>自律運転</small><br><small>ルール内で自動</small></div>
+  </div>
+
+  <div class="highlight">
+    <p>最初の14日間は読み取り専用。OpenClawに広告を変更させず、提案だけさせる。提案の質を確認してから、徐々に権限を渡す。</p>
+  </div>
+
+  <h3>CPA改善のロードマップ</h3>
+  <table>
+    <thead>
+      <tr><th>期間</th><th>CPA目標</th><th>施策</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>現状</td><td class="num-cell" style="color:var(--red);">&#165;8,130</td><td>既存クリエイティブ。週1回の手動チェック。</td></tr>
+      <tr><td>1ヶ月後</td><td class="num-cell">&#165;5,000〜6,000</td><td>1キャンペーン集約 + OC 24時間監視 + 競合データ反映</td></tr>
+      <tr><td>3ヶ月後</td><td class="num-cell">&#165;3,500〜4,000</td><td>サロンB/A素材投入 + Genviral高パフォーマンス素材転用</td></tr>
+      <tr><td>6ヶ月後</td><td class="num-cell" style="color:var(--green);">&#165;3,000以下</td><td>OC自律運転 + 類似オーディエンス + リターゲティング</td></tr>
+    </tbody>
+  </table>
+  <span class="page-number">5</span>
+</div>
+
+<!-- ============================== PAGE 6: SNS戦略 ============================== -->
+<div class="page">
+  <h2><span class="num">06</span>SNS戦略 ー 3プラットフォーム同時展開</h2>
+
+  <p class="lead">v1では「Instagram集中、TikTokとYouTubeはやらない」だった。Genviralスキルで、追加の手間ゼロで3プラットフォーム同時投稿が可能になった。</p>
+
+  <div class="flow">
+    <div class="flow-step">東氏が月1回<br>まとめ撮り<br><small>8本 / 2時間</small></div>
+    <div class="flow-arrow">&rarr;</div>
+    <div class="flow-step active">OpenClaw<br>+ Genviral<br><small>自動加工・投稿</small></div>
+    <div class="flow-arrow">&rarr;</div>
+    <div class="flow-step">Instagram<br>TikTok<br>YouTube Shorts</div>
+    <div class="flow-arrow">&rarr;</div>
+    <div class="flow-step">自動分析<br>次回改善<br><small>ループが回る</small></div>
+  </div>
+
+  <h3>コンテンツの使い回し</h3>
+  <table>
+    <thead>
+      <tr><th>元素材</th><th>展開先</th><th>追加作業</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>30秒リール動画</td><td>Instagram / TikTok / YouTube Shorts</td><td>0分（Genviral自動）</td></tr>
+      <tr><td>リールの書き起こし</td><td>LINE配信テキスト</td><td>0分（OC自動変換）</td></tr>
+      <tr><td>リールのポイント抽出</td><td>Instagramカルーセル（Canva）</td><td>20分（手動）</td></tr>
+      <tr><td>高パフォーマンス投稿</td><td>Meta広告クリエイティブ</td><td>10分（手動入稿）</td></tr>
+    </tbody>
+  </table>
+
+  <div class="success">
+    <p>月1回の撮影2時間 + 月初の企画2時間。あとはOpenClawが3プラットフォーム × 月8投稿 = 月24投稿を自動展開。</p>
+  </div>
+  <span class="page-number">6</span>
+</div>
+
+<!-- ============================== PAGE 7: LINE戦略 ============================== -->
+<div class="page">
+  <h2><span class="num">07</span>LINE戦略 ー Lステップ不要のAI CRM</h2>
+
+  <p class="lead">OpenClawはLINE Messaging APIにネイティブ対応。Lステップやエルメを使わずに、髪質診断からステップ配信まで全自動化できる。</p>
+
+  <h3>消費者向けLINE（Month 3〜）</h3>
+  <div class="flow">
+    <div class="flow-step">友だち追加</div>
+    <div class="flow-arrow">&rarr;</div>
+    <div class="flow-step">髪質診断5問</div>
+    <div class="flow-arrow">&rarr;</div>
+    <div class="flow-step active">4タイプ判定<br><small>全自動</small></div>
+    <div class="flow-arrow">&rarr;</div>
+    <div class="flow-step">商品レコメンド</div>
+    <div class="flow-arrow">&rarr;</div>
+    <div class="flow-step">14日間<br>ステップ配信</div>
+  </div>
+
+  <h3>サロン向けLINE（Month 1〜）</h3>
+  <div class="flow">
+    <div class="flow-step">「発注」と送信</div>
+    <div class="flow-arrow">&rarr;</div>
+    <div class="flow-step active">OC自動応答<br><small>フォームURL返信</small></div>
+    <div class="flow-arrow">&rarr;</div>
+    <div class="flow-step">発注完了</div>
+  </div>
+
+  <h3>コスト比較</h3>
+  <table>
+    <thead>
+      <tr><th></th><th>Lステップ</th><th>エルメ</th><th>OpenClaw</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>月額</td><td>2,980〜32,780円</td><td>10,780円〜</td><td class="num-cell" style="color:var(--green);">0円（API料に含む）</td></tr>
+      <tr><td>年間</td><td>3.5〜39万円</td><td>12.9万円〜</td><td class="num-cell" style="color:var(--green);">0円</td></tr>
+      <tr><td>カスタマイズ</td><td>テンプレート内</td><td>テンプレート内</td><td>完全自由</td></tr>
+      <tr><td>セットアップ</td><td>GUI操作</td><td>GUI操作</td><td>コード（Claude Code支援）</td></tr>
+    </tbody>
+  </table>
+  <span class="page-number">7</span>
+</div>
+
+<!-- ============================== PAGE 8: サロン ============================== -->
+<div class="page">
+  <h2><span class="num">08</span>サロン卸 ー 広告費ゼロのショールーム</h2>
+
+  <p class="lead">100店舗の導入実績は最大の資産。広告費ゼロで月130万円を生み出すチャネルとして再設計する。</p>
+
+  <h3>100店舗の分類と再活性化</h3>
+  <table>
+    <thead>
+      <tr><th>群</th><th>定義</th><th>推定店舗数</th><th>アクション</th></tr>
+    </thead>
+    <tbody>
+      <tr><td style="font-weight:700;color:var(--green);">A群</td><td>月3万円以上発注</td><td>10〜15店舗</td><td>B/A素材提供依頼</td></tr>
+      <tr><td style="font-weight:700;color:var(--accent);">B群</td><td>不定期発注</td><td>20〜30店舗</td><td>トークカード送付+LINE配信</td></tr>
+      <tr><td style="font-weight:700;color:var(--red);">C群</td><td>半年以上音沙汰なし</td><td>50〜60店舗</td><td>再連絡（最大インパクト）</td></tr>
+    </tbody>
+  </table>
+
+  <h3>OpenClawによるサロン対応の自動化</h3>
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-label">自動応答</div>
+      <p style="font-size:13px;">「発注」で発注フォームURL返信。「在庫」で在庫確認方法を案内。即レスで機会損失を防ぐ。</p>
+    </div>
+    <div class="card">
+      <div class="card-label">月次自動配信</div>
+      <p style="font-size:13px;">店販トークスクリプト + 他サロンの販売事例 + 再発注フォーム。毎月1日に自動送信。</p>
+    </div>
+    <div class="card">
+      <div class="card-label">朝の通知</div>
+      <p style="font-size:13px;">未読メッセージのサマリーを毎朝LINEに通知。手動対応が必要なものだけ返信。</p>
+    </div>
+    <div class="card">
+      <div class="card-label">素材回収</div>
+      <p style="font-size:13px;">B/A写真の提供依頼と使用許諾取得を半自動化。広告とLP改善の最大のレバー。</p>
+    </div>
+  </div>
+  <span class="page-number">8</span>
+</div>
+
+<!-- ============================== PAGE 9: Amazon ============================== -->
+<div class="page">
+  <h2><span class="num">09</span>Amazon ー レビュー100件が分水嶺</h2>
+
+  <p class="lead">31件から100件を超えるとCVRが飛躍的に上がる。そこまでは広告効率より販売数を優先する。</p>
+
+  <h3>即実行（Week 1-2）</h3>
+  <ul class="checklist">
+    <li>タイトル・箇条書きの書き換え（全SKU、所要1時間）</li>
+    <li>否定キーワード一括登録（安い/激安/メンズ/ペット/業務用）</li>
+    <li>同梱レビューカード発注（ラクスル 1,000枚 3,000円）</li>
+    <li>FBA移行（Primeマークで CVR 20-30%向上）</li>
+  </ul>
+
+  <h3>SP広告 月3〜5万円で回す構成</h3>
+  <table>
+    <thead>
+      <tr><th>キャンペーン</th><th>月予算</th><th>対象KW</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>指名防衛</td><td>5,000円</td><td>self シャンプー / self トリートメント</td></tr>
+      <tr><td>高意図KW攻略</td><td>2〜3.5万円</td><td>髪質改善 / くせ毛 / 縮毛矯正 / ペリセア / エルカラクトン</td></tr>
+      <tr><td>オートターゲティング</td><td>5,000〜1万円</td><td>自動（新KW発掘用）</td></tr>
+    </tbody>
+  </table>
+
+  <h3>OpenClawで自動化するAmazon関連タスク</h3>
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-label">レビュー分析</div>
+      <p style="font-size:13px;">31件のレビューから「褒め言葉TOP3」「不満パターン」を自動抽出。広告コピーとLP改善に反映。</p>
+    </div>
+    <div class="card">
+      <div class="card-label">競合価格追跡</div>
+      <p style="font-size:13px;">YOLU、&honey、ボタニスト等の価格変動を自動監視。値下げやクーポンをLINEに通知。</p>
+    </div>
+  </div>
+  <span class="page-number">9</span>
+</div>
+
+<!-- ============================== PAGE 10: ロードマップ ============================== -->
+<div class="page">
+  <h2><span class="num">10</span>6ヶ月ロードマップ</h2>
+
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-label">MONTH 1-2</div>
+      <div class="tl-title">基盤構築 + OpenClaw立ち上げ</div>
+      <div class="tl-desc">サロン再活性化 / Amazon最適化 / Meta広告再構築 / OC環境構築+競合リサーチ+広告監視</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-label">MONTH 3-4</div>
+      <div class="tl-title">自動化が加速する</div>
+      <div class="tl-desc">Genviral SNS 3プラットフォーム展開 / LINE髪質診断テスト / 定期便1プラン / トライアルOEM発注</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-label">MONTH 5-6</div>
+      <div class="tl-title">月商500万円へ</div>
+      <div class="tl-desc">LINE診断完全自動 / トライアルセット販売開始 / Meta広告CPA 3,000円台 / サロン40店舗アクティブ</div>
+    </div>
+  </div>
+
+  <table>
+    <thead>
+      <tr><th>月</th><th>月商見込み</th><th>広告費</th><th>OC月額</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1-2ヶ月目</td><td class="num-cell">200〜300万円</td><td>30万円</td><td>3万円</td></tr>
+      <tr><td>3-4ヶ月目</td><td class="num-cell">350〜400万円</td><td>35万円</td><td>4万円</td></tr>
+      <tr><td>5-6ヶ月目</td><td class="num-cell">450〜500万円</td><td>45万円</td><td>5万円</td></tr>
+    </tbody>
+  </table>
+  <span class="page-number">10</span>
+</div>
+
+<!-- ============================== PAGE 11: 16施策の取捨選択 ============================== -->
+<div class="page">
+  <h2><span class="num">11</span>既存16施策の取捨選択</h2>
+
+  <table>
+    <thead>
+      <tr><th>施策</th><th>判定</th><th>理由</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Amazon最適化</td><td style="color:var(--green);font-weight:700;">今すぐ</td><td>タイトル・KW・SP広告は即実行</td></tr>
+      <tr><td>Meta広告3層ファネル</td><td style="color:var(--green);font-weight:700;">今すぐ</td><td>1キャンペーンに縮小+OC監視</td></tr>
+      <tr><td>サロンB/A素材収集</td><td style="color:var(--green);font-weight:700;">今すぐ</td><td>3店舗から開始。広告CPA改善の鍵</td></tr>
+      <tr><td>広告戦略引き継ぎ書</td><td style="color:var(--green);font-weight:700;">今すぐ</td><td>Clarity/GTM確認は初日に</td></tr>
+      <tr><td>Instagram運用</td><td style="color:var(--blue);font-weight:700;">Month 2</td><td>Genviral導入で3プラットフォーム展開</td></tr>
+      <tr><td>LINE髪質診断</td><td style="color:var(--blue);font-weight:700;">Month 3</td><td>OC実装でLステップ不要に</td></tr>
+      <tr><td>LINE CRMステップ配信</td><td style="color:var(--blue);font-weight:700;">Month 3</td><td>髪質診断と同時にOCで構築</td></tr>
+      <tr><td>定期便最適化</td><td style="color:var(--blue);font-weight:700;">Month 3</td><td>1プランだけ。Smart Usageは後回し</td></tr>
+      <tr><td>トライアルセット</td><td style="color:var(--blue);font-weight:700;">Month 5</td><td>OEM発注は4ヶ月目に</td></tr>
+      <tr><td>東えりかIP化</td><td style="color:var(--gray);font-weight:700;">後回し</td><td>Genviral転載で最低限カバー</td></tr>
+      <tr><td>アンバサダー制度</td><td style="color:var(--gray);font-weight:700;">後回し</td><td>外注1人目を雇ってから</td></tr>
+      <tr><td>@cosme/LIPS</td><td style="color:var(--gray);font-weight:700;">後回し</td><td>登録だけMonth 5で</td></tr>
+      <tr><td>コミュニティ運営</td><td style="color:var(--red);font-weight:700;">やらない</td><td>1人では運営破綻</td></tr>
+      <tr><td>楽天・Yahoo出店</td><td style="color:var(--red);font-weight:700;">やらない</td><td>Amazon+公式ECが安定するまで</td></tr>
+      <tr><td>マガジンサイト(SEO)</td><td style="color:var(--red);font-weight:700;">やらない</td><td>効果まで6-12ヶ月。優先度低</td></tr>
+      <tr><td>月次KPIダッシュボード</td><td style="color:var(--gray);font-weight:700;">後回し</td><td>OC統合レポートで代替</td></tr>
+    </tbody>
+  </table>
+  <span class="page-number">11</span>
+</div>
+
+<!-- ============================== PAGE 12: 今週のアクション ============================== -->
+<div class="page">
+  <h2><span class="num">12</span>今週やる5つ</h2>
+
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-label">ACTION 1</div>
+      <div class="tl-title">サロン100店舗をA/B/C群に分類</div>
+      <div class="tl-desc">最終発注日をスプレッドシートに整理。C群50店舗への再連絡が最大のインパクト。</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-label">ACTION 2</div>
+      <div class="tl-title">Amazonのタイトル・箇条書きを書き換え</div>
+      <div class="tl-desc">既存ドキュメントの改善案をそのまま実行。所要1時間。否定KWも一括登録。</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-label">ACTION 3</div>
+      <div class="tl-title">Meta広告を1キャンペーンで再構築</div>
+      <div class="tl-desc">既存全停止。購入最適化1本 / 広告セット1つ / クリエイティブ3本。日予算2,000〜3,000円。</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-label">ACTION 4</div>
+      <div class="tl-title">OpenClaw環境構築 + 競合リサーチ試作</div>
+      <div class="tl-desc">Cloudflare Workers にデプロイ。Meta Ad Libraryから競合広告の自動収集を開始。読み取り専用で安全。</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-label">ACTION 5</div>
+      <div class="tl-title">サロン向けLINE公式アカウントを開設</div>
+      <div class="tl-desc">A群10-15店舗にまず友だち追加を依頼。OpenClaw接続はWeek 3。</div>
+    </div>
+  </div>
+
+  <div class="success">
+    <p>この5つが動けば、月商500万円への基盤ができる。まずは今週、ここから始める。</p>
+  </div>
+  <span class="page-number">12</span>
+</div>
+
+<!-- ============================== BACK COVER ============================== -->
+<div class="page cover" style="min-height:50vh;">
+  <div class="brand">self shampoo</div>
+  <h1 style="font-size:32px;">月商500万円は<br>仕組みで到達する</h1>
+  <div class="subtitle" style="margin-bottom:24px;">1人運営 &times; AI自動化で、やれることの桁が変わる</div>
+  <div class="meta">self138.com &mdash; 2026</div>
+</div>
+
+</body>
+</html>
