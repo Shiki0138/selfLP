@@ -1,0 +1,190 @@
+{
+  "shampoo-ingredients-guide": {
+    "slug": "shampoo-ingredients-guide",
+    "title": "シャンプーの成分表、読めますか？ 美容師が教える洗浄成分の見分け方",
+    "date": "2026-03-10",
+    "category": "成分解説",
+    "keywords_main": "シャンプー 成分表 見方",
+    "keywords_related": [
+      "シャンプー 選び方 成分",
+      "アミノ酸シャンプー 見分け方",
+      "硫酸フリー シャンプー"
+    ],
+    "description": "シャンプーの裏面に書いてある成分表示、なんとなく眺めて終わっていませんか。洗浄成分の種類と見分け方を、美容師がわかりやすく解説します。",
+    "thumbnail_prompt": "A clean, minimal flat-lay photo of a shampoo bottle lying on its back on a white marble surface, showing the ingredient list on the back label. Soft natural light from the left. Warm tones. No text overlay. Editorial beauty magazine style. 16:9 aspect ratio.",
+    "images": [
+      {
+        "prompt": "Minimal illustration of three shampoo bottles in a row, labeled with symbols representing different surfactant types. Clean pastel colors on white background. Simple editorial style. 16:9.",
+        "alt": "洗浄成分の3タイプを表すシャンプーボトルのイラスト"
+      },
+      {
+        "prompt": "Close-up photo of a woman's hand holding a shampoo bottle, reading the back label carefully in a bright bathroom. Natural light. Lifestyle editorial style. 16:9.",
+        "alt": "シャンプーの成分表を読む女性の手元"
+      }
+    ],
+    "internal_links_to": [],
+    "internal_links_from": [
+      "hair-oil-how-to-use",
+      "pellicera-hair-repair",
+      "salon-treatment-lasting",
+      "straightening-shampoo-guide"
+    ],
+    "competitors_summary": "上位記事は洗浄成分の種類解説が中心。アミノ酸系・硫酸系・ベタイン系の分類はほぼ全記事が扱う。成分表の読み方の具体的な手順、アミノ酸配合と表記されていても実質硫酸系であるケースへの言及が不足している記事が多い。"
+  },
+  "hair-oil-how-to-use": {
+    "slug": "hair-oil-how-to-use",
+    "title": "ヘアオイルの使い方、間違ってない？ つけすぎを防ぐ5つのコツ",
+    "date": "2026-03-11",
+    "category": "ヘアケア",
+    "keywords_main": "ヘアオイル 使い方",
+    "keywords_related": [
+      "洗い流さないトリートメント 使い方",
+      "ヘアオイル つけすぎ",
+      "ヘアオイル ドライヤー前"
+    ],
+    "description": "ヘアオイルの正しい使い方を美容師が解説。適量の目安、つけすぎたときの対処法、朝と夜の使い分けまで、すぐ実践できるコツをまとめました。",
+    "thumbnail_prompt": "Overhead flat-lay of a small amber glass bottle of hair oil next to a wooden comb and a soft white towel on a light oak table. Morning sunlight casting gentle shadows. Editorial beauty magazine photography. 16:9 aspect ratio.",
+    "images": [
+      {
+        "prompt": "Close-up of a woman's hands rubbing hair oil between her palms, soft bathroom lighting, shallow depth of field, editorial lifestyle photography. 16:9.",
+        "alt": "手のひらにヘアオイルを広げる女性"
+      },
+      {
+        "prompt": "Side profile of a woman gently applying oil to damp hair ends after a shower, warm natural light from a window, clean minimal bathroom background. 16:9.",
+        "alt": "タオルドライ後の毛先にヘアオイルをなじませる女性"
+      },
+      {
+        "prompt": "A woman using a hair dryer on medium heat while touching her mid-length hair, bright airy room, editorial beauty style. 16:9.",
+        "alt": "ドライヤーで髪を乾かす女性"
+      },
+      {
+        "prompt": "Morning vanity scene with a woman lightly smoothing her dry styled hair with fingertips, soft daylight, minimal aesthetic. 16:9.",
+        "alt": "朝のスタイリングで髪を整える女性"
+      },
+      {
+        "prompt": "Close-up of shiny healthy hair strands catching light, dark background, editorial beauty macro photography. 16:9.",
+        "alt": "ツヤのある健康的な髪のクローズアップ"
+      }
+    ],
+    "internal_links_to": [
+      "shampoo-ingredients-guide"
+    ],
+    "internal_links_from": [],
+    "competitors_summary": "上位記事はほぼ全て、適量の目安と毛先から塗布する手順を解説。朝夜の使い分けに触れる記事も多い。一方で、つけすぎた場合の具体的なリカバリー方法を丁寧に扱う記事は少なく、ドライヤー前につけるオイルとスタイリング用オイルの違いを明確に説明している記事もまだ少ない。成分面からオイルの選び方を掘り下げている記事はほぼ皆無。"
+  },
+  "pellicera-hair-repair": {
+    "slug": "pellicera-hair-repair",
+    "title": "ペリセア配合シャンプーは何が違う？美容師が補修力の仕組みを解説",
+    "date": "2026-03-11",
+    "category": "成分解説",
+    "keywords_main": "ペリセア シャンプー",
+    "keywords_related": [
+      "ペリセア 効果",
+      "ジラウロイルグルタミン酸リシンNa",
+      "補修成分 シャンプー"
+    ],
+    "description": "ペリセア配合のシャンプーが注目される理由を、髪質改善専門の美容師が解説。約1分で髪内部に届く浸透力の仕組みと、補修成分としての実力を掘り下げます。",
+    "thumbnail_prompt": "A single drop of golden serum falling onto a strand of dark hair against a soft cream background. Macro photography, shallow depth of field, warm natural light from the side. Editorial beauty magazine style, no text overlay. 16:9 aspect ratio.",
+    "images": [
+      {
+        "prompt": "Cross-section diagram of a human hair strand showing cuticle layers and cortex, with small glowing particles penetrating from outside to inside. Scientific illustration style with soft pastel colors on white background. Clean and minimal. 16:9.",
+        "alt": "髪の断面図とペリセアが浸透するイメージ"
+      },
+      {
+        "prompt": "Overhead flat-lay of a woman washing her hair with rich lather in a bright modern bathroom. Only hands and hair visible. Soft natural light, warm tones. Lifestyle editorial photography. 16:9.",
+        "alt": "シャンプーの泡で髪を洗う女性の手元"
+      },
+      {
+        "prompt": "Before and after comparison of a single hair strand, left side rough and damaged cuticles, right side smooth and aligned cuticles. Microscope-style close-up with soft lighting. Scientific beauty editorial style. 16:9.",
+        "alt": "補修前後の髪のキューティクル比較イメージ"
+      },
+      {
+        "prompt": "A premium shampoo bottle with minimal design placed on a wooden shelf next to fresh green leaves. Soft backlight creating a warm glow. Clean editorial product photography. 16:9.",
+        "alt": "補修成分配合のシャンプーボトルのイメージ"
+      }
+    ],
+    "internal_links_to": [
+      "shampoo-ingredients-guide"
+    ],
+    "internal_links_from": [],
+    "competitors_summary": "上位記事はペリセアの基本情報と旭化成の開発背景を紹介する内容が中心。浸透の速さに触れる記事は多いが、なぜ速いのかの構造的な説明が浅い。PPTとの違いを具体的に比較している記事はほぼない。シャンプーの洗い流し工程でも残る持続性について深堀りしている記事が少なく、実際の使い方や選び方まで踏み込んだ記事は不足している。"
+  },
+  "salon-treatment-lasting": {
+    "slug": "salon-treatment-lasting",
+    "title": "美容室のトリートメント、なぜ1週間で元どおり？5つの原因と自宅ケア",
+    "date": "2026-03-11",
+    "category": "ヘアケア",
+    "keywords_main": "美容室 トリートメント 長持ち",
+    "keywords_related": [
+      "サロントリートメント 持続",
+      "トリートメント すぐ落ちる",
+      "ホームケア シャンプー"
+    ],
+    "description": "美容室でトリートメントしたのに1週間で元どおり。その原因は日々のシャンプーやドライヤーの使い方にあります。サロン帰りのツヤを自宅で維持する方法を美容師が解説。",
+    "thumbnail_prompt": "A woman gently touching her shiny, smooth hair in a bright bathroom mirror, soft morning light streaming in from a window. Warm tones, editorial beauty magazine photography style. 16:9 aspect ratio.",
+    "images": [
+      {
+        "prompt": "Close-up of rich shampoo lather being gently massaged into hair, soft warm bathroom lighting, clean editorial beauty style. 16:9 aspect ratio.",
+        "alt": "やさしく泡立てたシャンプーで髪を洗う様子"
+      },
+      {
+        "prompt": "A woman blow-drying her hair with a dryer held at a distance, showing proper technique, warm soft lighting in a modern bathroom. Editorial lifestyle photography. 16:9 aspect ratio.",
+        "alt": "正しいドライヤーの使い方で髪を乾かす女性"
+      },
+      {
+        "prompt": "Flat-lay of a hair care routine on a white marble surface: shampoo bottle, treatment tube, and hair oil arranged neatly. Soft natural light. Minimal editorial style. 16:9 aspect ratio.",
+        "alt": "シャンプー・トリートメント・ヘアオイルのフラットレイ"
+      },
+      {
+        "prompt": "A woman with glossy healthy hair smiling while running her fingers through her hair ends, natural daylight, warm editorial portrait style. 16:9 aspect ratio.",
+        "alt": "ツヤのある髪を触る笑顔の女性"
+      }
+    ],
+    "internal_links_to": [
+      "shampoo-ingredients-guide"
+    ],
+    "internal_links_from": [],
+    "competitors_summary": "上位記事はサロントリートメントの持続期間（1週間〜1か月）と長持ちさせるコツの紹介が中心。シャンプーの洗浄力との関係に触れる記事は多いが、洗浄成分の種類まで踏み込んで解説している記事は少ない。ホームケアの具体的な手順やステップを体系的にまとめた記事が不足しており、ドライヤーの使い方や就寝時の摩擦対策まで言及するものはごく一部。月1回のサロン通いを推奨する記事が大半で、自宅ケアの質を上げることでサロン間隔を延ばせるという視点が抜けている。"
+  },
+  "straightening-shampoo-guide": {
+    "slug": "straightening-shampoo-guide",
+    "title": "縮毛矯正後のシャンプー、何を使えばいい？ 美容師が選び方5つを解説",
+    "date": "2026-03-11",
+    "category": "ヘアケア",
+    "keywords_main": "縮毛矯正 シャンプー おすすめ",
+    "keywords_related": [
+      "縮毛矯正後 ホームケア",
+      "髪質改善 シャンプー 選び方",
+      "縮毛矯正 長持ち"
+    ],
+    "description": "縮毛矯正をかけたあと、どんなシャンプーを使えば長持ちするのか。当日の扱い方から成分の選び方まで、髪質改善専門の美容師が具体的に解説します。",
+    "thumbnail_prompt": "A woman gently touching her sleek straight hair in a bright, airy bathroom. Soft morning light from a window. Shampoo bottle visible on the counter in the background. Warm neutral tones. Editorial beauty photography style. 16:9 aspect ratio.",
+    "images": [
+      {
+        "prompt": "Close-up of a woman washing her hair with gentle foam in the shower. Soft warm lighting. Minimal and clean aesthetic. Editorial beauty style. 16:9.",
+        "alt": "やさしい泡で髪を洗う女性のクローズアップ"
+      },
+      {
+        "prompt": "Flat-lay of a shampoo bottle and treatment bottle on a white towel with a wooden comb. Natural light. Minimal clean composition. 16:9.",
+        "alt": "シャンプーとトリートメントのフラットレイ"
+      },
+      {
+        "prompt": "A woman with smooth straight hair looking in a mirror, touching the ends of her hair. Warm bathroom lighting. Lifestyle editorial beauty. 16:9.",
+        "alt": "ストレートヘアの毛先を確認する女性"
+      },
+      {
+        "prompt": "Close-up of shampoo lather on hands, creamy and rich texture. Bright white background. Product photography style. 16:9.",
+        "alt": "クリーミーなシャンプーの泡立ち"
+      },
+      {
+        "prompt": "A woman sitting at a vanity applying hair oil to the ends of her straight hair. Soft golden hour light. Editorial beauty lifestyle. 16:9.",
+        "alt": "ヘアオイルを毛先になじませる女性"
+      }
+    ],
+    "internal_links_to": [
+      "shampoo-ingredients-guide"
+    ],
+    "internal_links_from": [],
+    "competitors_summary": "上位記事はおすすめ商品ランキング形式が大半で、10〜27選と数を競う傾向が強い。選び方として洗浄成分の種類やNG成分には触れるが、なぜ縮毛矯正後の髪にダメージが蓄積しやすいのかという仕組みの説明が薄い。当日いつから洗えるかのFAQは定番だが、施術後1週間のケア手順まで踏み込んだ記事は少ない。ドラッグストアで買える市販品の紹介が中心で、サロン品質の成分がなぜ必要かの説得力に欠ける記事が多い。"
+  }
+}

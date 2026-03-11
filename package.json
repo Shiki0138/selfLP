@@ -1,0 +1,16 @@
+{
+  "name": "self-magazine",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node magazine/build.js",
+    "build:no-images": "SKIP_IMAGE_GEN=1 node magazine/build.js",
+    "generate": "node magazine/generate-articles.js",
+    "weekly": "node magazine/generate-articles.js 3 && node magazine/build.js"
+  },
+  "dependencies": {
+    "@google/genai": "^1.0.0",
+    "gray-matter": "^4.0.3",
+    "marked": "^15.0.0"
+  }
+}

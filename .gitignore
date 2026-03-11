@@ -1,4 +1,7 @@
 .vercel
+.env
+node_modules/
+magazine/.image-cost-log.json
 
 # Remotion chrome binary (too large for GitHub)
 remotion/node_modules/
