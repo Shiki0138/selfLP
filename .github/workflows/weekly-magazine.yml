@@ -2,13 +2,13 @@ name: Weekly Magazine Articles
 
 on:
   schedule:
-    # 毎週月曜 AM9:00 JST (日曜 24:00 UTC)
-    - cron: '0 0 * * 1'
+    # 月・水・金 AM9:00 JST (前日 24:00 UTC)
+    - cron: '0 0 * * 1,3,5'
   workflow_dispatch:
     inputs:
       count:
         description: 'Number of articles to generate'
-        default: '3'
+        default: '1'
         type: string
 
 jobs:
@@ -30,7 +30,7 @@ jobs:
       - name: Generate articles
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: node magazine/generate-articles.js ${{ inputs.count || '3' }}
+        run: node magazine/generate-articles.js ${{ inputs.count || '1' }}
 
       - name: Build magazine (with images)
         env:
