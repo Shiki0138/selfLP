@@ -27,7 +27,8 @@
       "hair-oil-how-to-use",
       "pellicera-hair-repair",
       "salon-treatment-lasting",
-      "straightening-shampoo-guide"
+      "straightening-shampoo-guide",
+      "amino-acid-shampoo-benefits"
     ],
     "competitors_summary": "上位記事は洗浄成分の種類解説が中心。アミノ酸系・硫酸系・ベタイン系の分類はほぼ全記事が扱う。成分表の読み方の具体的な手順、アミノ酸配合と表記されていても実質硫酸系であるケースへの言及が不足している記事が多い。"
   },
@@ -106,7 +107,9 @@
     "internal_links_to": [
       "shampoo-ingredients-guide"
     ],
-    "internal_links_from": [],
+    "internal_links_from": [
+      "amino-acid-shampoo-benefits"
+    ],
     "competitors_summary": "上位記事はペリセアの基本情報と旭化成の開発背景を紹介する内容が中心。浸透の速さに触れる記事は多いが、なぜ速いのかの構造的な説明が浅い。PPTとの違いを具体的に比較している記事はほぼない。シャンプーの洗い流し工程でも残る持続性について深堀りしている記事が少なく、実際の使い方や選び方まで踏み込んだ記事は不足している。"
   },
   "salon-treatment-lasting": {
@@ -143,7 +146,9 @@
     "internal_links_to": [
       "shampoo-ingredients-guide"
     ],
-    "internal_links_from": [],
+    "internal_links_from": [
+      "amino-acid-shampoo-benefits"
+    ],
     "competitors_summary": "上位記事はサロントリートメントの持続期間（1週間〜1か月）と長持ちさせるコツの紹介が中心。シャンプーの洗浄力との関係に触れる記事は多いが、洗浄成分の種類まで踏み込んで解説している記事は少ない。ホームケアの具体的な手順やステップを体系的にまとめた記事が不足しており、ドライヤーの使い方や就寝時の摩擦対策まで言及するものはごく一部。月1回のサロン通いを推奨する記事が大半で、自宅ケアの質を上げることでサロン間隔を延ばせるという視点が抜けている。"
   },
   "straightening-shampoo-guide": {
@@ -186,5 +191,40 @@
     ],
     "internal_links_from": [],
     "competitors_summary": "上位記事はおすすめ商品ランキング形式が大半で、10〜27選と数を競う傾向が強い。選び方として洗浄成分の種類やNG成分には触れるが、なぜ縮毛矯正後の髪にダメージが蓄積しやすいのかという仕組みの説明が薄い。当日いつから洗えるかのFAQは定番だが、施術後1週間のケア手順まで踏み込んだ記事は少ない。ドラッグストアで買える市販品の紹介が中心で、サロン品質の成分がなぜ必要かの説得力に欠ける記事が多い。"
+  },
+  "amino-acid-shampoo-benefits": {
+    "slug": "amino-acid-shampoo-benefits",
+    "title": "アミノ酸シャンプーの効果とは？髪質改善美容師が選び方と使い方を徹底解説",
+    "date": "2026-03-13",
+    "category": "成分解説",
+    "keywords_main": "アミノ酸シャンプー 効果",
+    "keywords_related": [
+      "アミノ酸系シャンプー デメリット",
+      "アミノ酸シャンプー 成分",
+      "髪質改善 シャンプー"
+    ],
+    "description": "髪質改善専門美容師がアミノ酸シャンプーの持つ本当の効果を徹底解説。髪と頭皮への優しさ、ダメージ補修の仕組み、正しい選び方と使い方まで、あなたの髪悩みを解決するヒントがここに。",
+    "thumbnail_prompt": "Close-up shot of healthy, shiny hair strands being gently washed with rich, foamy shampoo, soft focus background, natural light, editorial beauty style, 16:9 aspect ratio.",
+    "images": [
+      {
+        "prompt": "Detailed illustration of a hair strand showing cuticle layers and inner cortex, with tiny amino acid molecules integrating into damaged areas, scientific yet artistic style, clean background.",
+        "alt": "髪の構造とアミノ酸が浸透して補修するイメージ図"
+      },
+      {
+        "prompt": "Woman gently massaging her scalp with fingertips while shampooing, serene expression, soft lighting, focus on healthy scalp and hair roots, editorial beauty style.",
+        "alt": "優しく頭皮マッサージをしながらシャンプーをする女性"
+      },
+      {
+        "prompt": "Close-up of hair strands before and after using an amino acid shampoo, showing a clear difference in smoothness, shine, and reduced frizz, split screen or side-by-side comparison, professional studio lighting.",
+        "alt": "アミノ酸シャンプー使用前後の髪の毛の比較（ツヤとまとまり）"
+      }
+    ],
+    "internal_links_to": [
+      "shampoo-ingredients-guide",
+      "pellicera-hair-repair",
+      "salon-treatment-lasting"
+    ],
+    "internal_links_from": [],
+    "competitors_summary": "検索上位記事は、アミノ酸シャンプーの基本効果、メリット・デメリット、おすすめ商品を網羅的に解説しているものが多いです。成分の深い解説よりも「選び方」「おすすめ」に重点が置かれがちです。\n差別化ポイントとしては、髪質改善専門美容師「東 恵理子」の専門性と信頼性を強調し、アミノ酸が髪に作用するメカニズムを、より具体的に、分かりやすく解説することに注力します。単なるメリットだけでなく、正しい選び方や使い方、他の補修成分（ペリセア、エルカラクトン）との組み合わせの重要性にも言及し、読者の「なぜ？」に深く答える構成とします。自社商品の押し付けではなく、情報提供に徹しつつ、自然な形で自社商品の特徴と結びつけます。\n"
   }
 }
